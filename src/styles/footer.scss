@@ -1,0 +1,45 @@
+@import "./variables";
+
+.footer {
+  height: 100px;
+  background-color: $primary-color;
+  color: $gray;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  padding: 0 2rem;
+  align-items: center;
+  margin-top: auto;
+
+  p {
+    margin: 0;
+  }
+
+  .right {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    p {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    a {
+      margin-left: 5px;
+      &:hover {
+        opacity: 0.6;
+      }
+    }
+    img {
+      height: 2rem;
+      width: 2rem;
+      margin-left: 5px;
+
+      &:hover {
+        cursor: pointer;
+        color: $black;
+        opacity: 0.6;
+      }
+    }
+  }
+}
