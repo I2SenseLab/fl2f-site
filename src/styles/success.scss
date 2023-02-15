@@ -14,7 +14,9 @@
         width: 60%;
         margin-right: 2rem;
         img {
+          border-radius: 5px;
           width: 100%;
+          max-height: 220px;
         }
       }
 
@@ -49,11 +51,15 @@
   background-color: $white;
 
   .container {
-    div {
+    .top {
       flex-direction: row-reverse;
 
       .logo {
         margin: 0 0 0 2rem;
+      }
+
+      .participant {
+        flex-direction: row-reverse;
       }
     }
   }
