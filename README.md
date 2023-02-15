@@ -1,5 +1,9 @@
 # Main static Website for FL2F
 
+### Todo
+
+1. change video embed iframe to @astro-community/astro-embed-youtube when they release support for typescript
+
 ## 🚀 Project Structure
 
 Inside of your Astro project, you'll see the following folders and files:

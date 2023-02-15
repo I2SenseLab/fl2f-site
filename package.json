@@ -12,5 +12,8 @@
 	"dependencies": {
 		"astro": "^2.0.11",
 		"sass": "^1.58.1"
+	},
+	"devDependencies": {
+		"@astro-community/astro-embed-youtube": "^0.2.2"
 	}
 }

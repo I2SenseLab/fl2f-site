@@ -1,7 +1,7 @@
 ---
 import Layout from "../layouts/Layout.astro";
 import Showcase from "../components/Showcase.astro";
-import VideoEmbed from "../components/VideoEmbed.astro";
+import Video from "../components/Video.astro";
 import "../styles/global.scss";
 import "../styles/index.scss";
 ---
@@ -9,19 +9,31 @@ import "../styles/index.scss";
 <Layout title="FL2F">
   <Showcase />
 
-  <section class="fl2f">
-    <h2>What is FL2F?</h2>
-    <p>
-      From Lab 2 Fulfillment (FL2F) is a purpose-driven program that teaches
-      women in science, engineering, technology, math (STEM), and Health how to
-      transform your ideas into products and companies.
-    </p>
-    <p>
-      Learn in small interactive sessions alongside one-on-one coaching to
-      ideate and pivot your idea into a business. You will learn how to overcome
-      hurdles, find supporters, and build your own strategic plan and alliances.
-    </p>
+  <section class="text">
+    <div class="container">
+      <h2>What is FL2F?</h2>
+      <p>
+        From Lab 2 Fulfillment (FL2F) is a purpose-driven program that teaches
+        women in science, engineering, technology, math (STEM), and Health how
+        to transform your ideas into products and companies.
+      </p>
+      <p>
+        Learn in small interactive sessions alongside one-on-one coaching to
+        ideate and pivot your idea into a business. You will learn how to
+        overcome hurdles, find supporters, and build your own strategic plan and
+        alliances.
+      </p>
+    </div>
   </section>
 
-  <VideoEmbed />
+  <Video />
+
+  <section class="text cultivating">
+    <div class="container">
+      <p>
+        We thrive on cultivating the skills women need to start their own
+        businesses. Check out some of what our past participants have created!
+      </p>
+    </div>
+  </section>
 </Layout>

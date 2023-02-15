@@ -11,16 +11,19 @@
   z-index: 2;
   &-text {
     text-align: center;
-    margin: 50px auto;
     position: absolute;
     top: 0;
     left: 0;
     height: 100%;
     width: 100%;
+
+    margin: 50px auto;
+
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
+
     h1 {
       font-size: 50px;
       margin-bottom: 20px;

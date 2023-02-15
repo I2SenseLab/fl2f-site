@@ -1,3 +1,17 @@
+@import "./variables";
+
 .video {
-  height: 40vh;
+  height: 80vh;
+  background-color: $primary-color;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  flex-direction: column;
+  margin-bottom: 1rem;
+
+  iframe {
+    height: 600px;
+    width: 1000px;
+    object-fit: cover;
+  }
 }
