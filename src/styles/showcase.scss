@@ -2,30 +2,41 @@
 
 .showcase {
   height: auto;
-  position: absolute;
-  color: $primary-color;
-  right: 0;
+  color: $secondary-color;
+  position: relative;
   width: 100%;
-  min-height: 50vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  overflow: hidden;
+  max-height: 70vh;
+
   z-index: 2;
   &-text {
-    // max-width: 500px;
     text-align: center;
     margin: 50px auto;
-  }
-  h1 {
-    font-size: 50px;
-    margin-bottom: 20px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    h1 {
+      font-size: 50px;
+      margin-bottom: 20px;
+    }
   }
 
-  &-img {
-    position: absolute;
+  &-image {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    top: 50%;
+    left: 50%;
+    min-width: 100%;
+    min-height: 100%;
     img {
-      border-radius: 10px;
-      margin: auto;
+      max-width: 100%;
     }
   }
 }
