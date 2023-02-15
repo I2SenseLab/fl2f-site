@@ -6,7 +6,7 @@
   position: relative;
   width: 100%;
   overflow: hidden;
-  max-height: 70vh;
+  max-height: 80vh;
 
   z-index: 2;
   &-text {
@@ -31,8 +31,6 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    top: 50%;
-    left: 50%;
     min-width: 100%;
     min-height: 100%;
     img {
