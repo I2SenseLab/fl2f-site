@@ -4,6 +4,11 @@ import Showcase from "../components/Showcase.astro";
 import Video from "../components/Video.astro";
 import "../styles/global.scss";
 import "../styles/index.scss";
+import Success from "../components/Success.astro";
+
+//imports for success stories
+import vitaa from "../images/vitaa-logo.png";
+import drMartino from "../images/dr.elena-di-martino.png";
 ---
 
 <Layout title="FL2F">
@@ -36,4 +41,24 @@ import "../styles/index.scss";
       </p>
     </div>
   </section>
+
+  <Success
+    className="success"
+    logo={vitaa}
+    participant={drMartino}
+    bio="Dr. Elena Di Martino is the co-founder and CSO of ViTAA Medical Solutions, a company that focuses on precision medicine in patients with abdominal aortic aneurysms."
+    review="For me, the most important thing is to reflect on my role...I've been actively writing patents and getting my creativ juices flowing…I had a patent, of course, to start with, but now we wrot another four...That to me has been the most rewarding part of it..."
+    span="The most important thing for me was to understand what I wanted to do."
+    reviewer="Dr. Elena Di Martino, Civil Engineering Co-Founder and CSO of ViTAA Medical Solutions"
+  />
+
+  <Success
+    className="success success-reverse"
+    logo={vitaa}
+    participant={drMartino}
+    bio="Dr. Elena Di Martino is the co-founder and CSO of ViTAA Medical Solutions, a company that focuses on precision medicine in patients with abdominal aortic aneurysms."
+    review="For me, the most important thing is to reflect on my role...I've been actively writing patents and getting my creativ juices flowing…I had a patent, of course, to start with, but now we wrot another four...That to me has been the most rewarding part of it..."
+    span="The most important thing for me was to understand what I wanted to do."
+    reviewer="Dr. Elena Di Martino, Civil Engineering Co-Founder and CSO of ViTAA Medical Solutions"
+  />
 </Layout>

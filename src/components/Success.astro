@@ -1,0 +1,38 @@
+---
+import "../styles/success.scss";
+
+export interface Props {
+  className?: string;
+  logo?: string;
+  participant?: string;
+  bio?: string;
+  review?: string;
+  span?: string;
+  reviewer?: string;
+}
+const { className, logo, participant, bio, review, span, reviewer } =
+  Astro.props as Props;
+---
+
+<section class={className}>
+  <div class="container">
+    <div class="top">
+      <div class="logo">
+        <img src={logo} alt="logo for success" loading="lazy" />
+      </div>
+      <div class="participant">
+        <img src={participant} alt="success image" loading="lazy" />
+        <p class="bio">
+          {bio}
+        </p>
+      </div>
+    </div>
+    <p class="review">
+      "{review}
+      <span>{span}</span>"
+    </p>
+    <h3 class="title">
+      {reviewer}
+    </h3>
+  </div>
+</section>
