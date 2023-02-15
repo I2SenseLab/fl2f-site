@@ -1,1 +1,22 @@
-<h1>SHowcase</h1>
+---
+import "../styles/showcase.scss";
+import shocaseImg from "../images/showcaseImg.avif";
+export interface Props {
+  heading?: string;
+  text?: string;
+  showExtra?: boolean;
+}
+const {
+  heading = "Women in STEM/Health creating more impact and fulfilment - we make it happen!",
+  showExtra = false,
+} = Astro.props as Props;
+---
+
+<section class="showcase">
+  <div class="shocase-image">
+    <img src={shocaseImg} alt="showcase Image" />
+  </div>
+  <div class="showcase-text">
+    <h1>{heading}</h1>
+  </div>
+</section>

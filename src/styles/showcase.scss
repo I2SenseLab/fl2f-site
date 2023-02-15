@@ -1,0 +1,40 @@
+@import "./variables";
+
+.showcase {
+  height: auto;
+  position: absolute;
+  color: $primary-color;
+  right: 0;
+  width: 100%;
+  min-height: 50vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 2;
+  &-text {
+    // max-width: 500px;
+    text-align: center;
+    margin: 50px auto;
+  }
+  h1 {
+    font-size: 50px;
+    margin-bottom: 20px;
+  }
+
+  &-img {
+    position: absolute;
+    img {
+      border-radius: 10px;
+      margin: auto;
+    }
+  }
+}
+.showcase-blog {
+  min-height: 300px;
+}
+
+.showcase-demo {
+  color: #fff;
+  text-align: center;
+  font-weight: 300;
+}

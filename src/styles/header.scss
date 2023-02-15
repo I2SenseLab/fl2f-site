@@ -23,8 +23,10 @@
     height: 70px;
 
     .logo {
-      height: 2.5rem;
-      width: 7rem;
+      min-height: 2.5rem;
+      min-width: 7rem;
+      max-height: 2.5rem;
+      max-width: 7rem;
       img {
         height: 100%;
         width: 100%;
