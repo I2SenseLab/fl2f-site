@@ -99,12 +99,12 @@
         color: #000;
 
         &:hover {
-          color: $primary-color;
+          color: $secondary-color;
         }
         &.active {
-          color: $primary-color;
+          color: $secondary-color;
           text-decoration: none;
-          border-bottom: 2px solid $primary-color;
+          border-bottom: 2px solid $secondary-color;
         }
       }
     }

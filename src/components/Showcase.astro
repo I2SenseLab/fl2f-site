@@ -2,19 +2,27 @@
 import "../styles/showcase.scss";
 import showcaseImg from "../images/showcaseImg.avif";
 export interface Props {
+  image: string;
   heading?: string;
   text?: string;
   showExtra?: boolean;
+  overlay?: boolean;
+  overlayLight?: boolean;
 }
 const {
+  image,
   heading = "Women in STEM/Health creating more impact and fulfilment - we make it happen!",
   showExtra = false,
+  overlay,
+  overlayLight,
 } = Astro.props as Props;
 ---
 
 <section class="showcase">
+  {overlay && <div class="overlay" />}
+  {overlayLight && <div class="overlay-light" />}
   <div class="showcase-image">
-    <img src={showcaseImg} alt="showcase Image" loading="eager" />
+    <img src={image} alt="showcase Image" loading="eager" />
   </div>
 
   <div class="showcase-text">
