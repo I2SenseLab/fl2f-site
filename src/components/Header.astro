@@ -1,30 +1,61 @@
 ---
 import "../styles/header.scss";
-import logo from "../images/FL2F-logo.png";
+import HeaderLink from "./HeaderLink.astro";
+const logo = "/images/FL2F-logo.png";
 ---
 
 <header class="header">
   <div class="container">
     <div class="logo">
       <a href="/">
-        <img src={logo} alt="logo" />
+        <img
+          src={logo}
+          alt="FL2F logo"
+          loading="eager"
+          fetchpriority="high"
+          decoding="async"
+        />
       </a>
     </div>
-    <nav>
-      <ul class="nav-items">
-        <li><a href="/apply"></a>Apply</li>
-        <li><a href="/about"></a>About</li>
-        <li><a href="/founder"></a>Our Founder</li>
-        <li><a href="/testimonials"></a>Testimonials</li>
-        <li>
-          <a href="/contact"></a>Institute Recommendations
-        </li>
-        <li><a href="/success"></a>Success Stories</li>
-        <li><a href="/news"></a>News & Events</li>
-        <li><a href="/careers"></a>Careers</li>
-        <li><a href="/faq"></a>FAQ</li>
-        <li><a href="/contact"></a>Contact Us</li>
-      </ul>
+
+    <label for="open-menu" class="hidden"></label>
+    <input id="open-menu" class="toggler" type="checkbox" />
+    <div id="hamberger" class="hamberger"><div></div></div>
+
+    <nav class="menu">
+      <HeaderLink class="menu-link" href="/">Home</HeaderLink>
+      <HeaderLink class="menu-link" href="/apply">Apply</HeaderLink>
+      <HeaderLink class="menu-link" href="/about">About Us</HeaderLink>
+      <HeaderLink class="menu-link" href="/founder">Our Founder</HeaderLink>
+      <HeaderLink class="menu-link" href="/testimonials">
+        Testimonials
+      </HeaderLink>
+      <HeaderLink class="menu-link" href="/contact">
+        Institute Recommendations
+      </HeaderLink>
+      <HeaderLink class="menu-link" href="/success">Success Stories</HeaderLink>
+      <HeaderLink class="menu-link" href="/news">News & Events</HeaderLink>
+      <HeaderLink class="menu-link" href="/careers">Careers</HeaderLink>
+      <HeaderLink class="menu-link" href="/faq">FAQ</HeaderLink>
+      <HeaderLink class="menu-link" href="/contact">Contact Us</HeaderLink>
+
+      <script>
+        const open = document.getElementById("open-menu") as HTMLInputElement;
+        const hamberger = document.getElementById("hamberger") as HTMLElement;
+        const links = document.querySelectorAll(
+          ".menu-link"
+        ) as NodeListOf<Element>;
+
+        hamberger.addEventListener("click", () => {
+          open.checked = !open.checked;
+        });
+
+        links.forEach((link) => {
+          link.addEventListener("click", () => {
+            open.checked = false;
+          });
+        });
+      </script>
     </nav>
   </div>
 </header>
