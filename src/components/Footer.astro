@@ -1,16 +1,36 @@
 ---
 import "../styles/footer.scss";
 import linkedin from "../images/linkedin.png";
+const logo = "/images/FL2F-logo.png";
+const date = new Date().getFullYear();
 ---
 
 <footer class="footer">
-  <div>
-    <p>© 2023</p>
-    <p>All Rights Reserved to Technologies & Beyond, Inc</p>
-  </div>
-  <div class="right">
-    <p>For general inquiries, please contact us:</p>
-    <a href="mailto:theteam@fl2f.ca"> theteam@fl2f.ca</a>
-    <img src={linkedin} alt="linkedin" loading="lazy" />
+  <div class="container">
+    <div class="left">
+      <a
+        href="https://www.linkedin.com/company/from-lab-to-fulfillment/"
+        target="_blank"
+        rel="noreferrer"
+      >
+        <img src={linkedin} alt="linkedin logo" />
+      </a>
+      <a href="mailto:theteam@fl2f.ca" class="email"> theteam@fl2f.ca</a>
+
+      <a href="https://www.fl2f.ca/" target="_blank">
+        &copy; From Lab 2 Fulfillment, {date}
+      </a>
+    </div>
+    <div class="right">
+      <a href="/" class="nav-item">
+        <img
+          src={logo}
+          alt="FL2F logo"
+          loading="lazy"
+          fetchpriority="high"
+          decoding="async"
+        />
+      </a>
+    </div>
   </div>
 </footer>
