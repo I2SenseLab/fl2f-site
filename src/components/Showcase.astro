@@ -1,6 +1,5 @@
 ---
 import "../styles/showcase.scss";
-import showcaseImg from "../images/showcaseImg.avif";
 export interface Props {
   image: string;
   heading?: string;
@@ -12,7 +11,6 @@ export interface Props {
 const {
   image,
   heading = "Women in STEM/Health creating more impact and fulfilment - we make it happen!",
-  showExtra = false,
   overlay,
   overlayLight,
 } = Astro.props as Props;
