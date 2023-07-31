@@ -7,10 +7,9 @@
     .top {
       display: flex;
       justify-content: space-between;
-      // padding: 2rem 0;
       margin-bottom: 2rem;
 
-      .logo {
+      .success-logo {
         width: 60%;
         margin-right: 2rem;
         img {
@@ -21,9 +20,8 @@
       }
 
       .participant {
-        display: flex;
-        align-items: center;
-        justify-content: center;
+        @include flex-center();
+        align-items: flex-start;
         img {
           max-height: 220px;
           border-radius: 5px;
