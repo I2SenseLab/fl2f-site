@@ -11,7 +11,9 @@
 
       .success-logo {
         width: 60%;
+        max-width: 500px;
         margin-right: 2rem;
+        aspect-ratio: 31 / 11;
         img {
           border-radius: 5px;
           width: 100%;

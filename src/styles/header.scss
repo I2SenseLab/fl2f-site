@@ -51,6 +51,7 @@
 @import "variables";
 
 .header {
+  @include flex-between();
   position: sticky;
   top: 0;
   height: $nav-height;
@@ -59,8 +60,6 @@
   // opacity: 0.9;
   z-index: 1000;
 
-  @include flex-between();
-  height: 100%;
   .logo {
     max-height: 4rem;
     aspect-ratio: 2112/733;
