@@ -1,7 +1,7 @@
 ---
 import "../styles/testimonials.scss";
 
-import * as featured1 from "../content/testimonials/1-DrMartino.md";
+import * as featured1 from "../content/testimonials/1-DrDiMartino.md";
 import * as featured2 from "../content/testimonials/2-DrCuriel.md";
 import * as featured3 from "../content/testimonials/3-DrHazay.md";
 import Card from "./Card.astro";
@@ -30,6 +30,7 @@ if (!isFeatured) {
 }
 ---
 
+{console.log("mapArr", mapArr)}
 <section class="testimonials">
   <div class="container">
     <h2>
@@ -40,13 +41,18 @@ if (!isFeatured) {
 
     <div class="grid">
       {
-        mapArr.map((project) => (
-          <Card
-            participantImage={project.image}
-            review={project.review}
-            participant={project.description}
-          />
-        ))
+        mapArr.map((project) => {
+          {
+            console.log("project", project);
+          }
+          return (
+            <Card
+              participantImage={project.frontmatter.image}
+              review={project.frontmatter.review}
+              description={project.frontmatter.description}
+            />
+          );
+        })
       }
       <!-- <Card
         logo={vitaa}

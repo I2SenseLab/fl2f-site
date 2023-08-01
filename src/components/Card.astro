@@ -1,34 +1,26 @@
 ---
 import "../styles/card.scss";
 export interface Props {
-  logo?: string;
+  description?: string;
   participantImage?: string;
-  participant?: string;
-  bio?: string;
   review?: string;
-  span?: string;
 }
-const { logo, participantImage, bio, review, span, participant } =
-  Astro.props as Props;
+const { participantImage, review, description } = Astro.props as Props;
 ---
 
 <div class="card">
-  <div class="top">
-    <div class="success-logo">
-      <img src={logo} alt="logo for success" loading="lazy" />
-    </div>
+  <div class="left">
     <div class="participant">
       <img src={participantImage} alt="image of participant" loading="lazy" />
-      <p class="bio">
-        {bio}
-      </p>
+      <p class="bio"></p>
     </div>
   </div>
-  <p class="review">
-    "{review}
-    <span>{span}</span>"
-  </p>
-  <h3 class="title">
-    {participant}
-  </h3>
+  <div class="right">
+    <div class="description">
+      {description}
+    </div>
+    <div class="review">
+      {review}
+    </div>
+  </div>
 </div>
