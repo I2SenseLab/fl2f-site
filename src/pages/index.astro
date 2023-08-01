@@ -20,6 +20,7 @@ import drCuriel from "../images/people/dr.laura-curiel.png";
 import ligero from "../images/logos/ligero.png";
 import drHazay from "../images/people/dr.carmit-hazay.png";
 import WhatIsFL2F from "../components/WhatIsFL2F.astro";
+import Card from "../components/Card.astro";
 ---
 
 <Layout title="FL2F">
@@ -44,35 +45,34 @@ import WhatIsFL2F from "../components/WhatIsFL2F.astro";
       </h2>
       <p>Check out some of what our past participants have created!</p>
     </div>
+
+    <Card
+      logo={vitaa}
+      participantImage={drMartino}
+      bio="Dr. Elena Di Martino is the co-founder and CSO of ViTAA Medical Solutions, a company that focuses on precision medicine in patients with abdominal aortic aneurysms."
+      review="For me, the most important thing is to reflect on my role...I've been actively writing patents and getting my creativ juices flowing…I had a patent, of course, to start with, but now we wrot another four...That to me has been the most rewarding part of it..."
+      span="The most important thing for me was to understand what I wanted to do."
+      participant="Dr. Elena Di Martino, Civil Engineering Co-Founder and CSO of ViTAA Medical Solutions"
+    />
+
+    <Success
+      className="success success-reverse"
+      logo={novusTX}
+      participant={drCuriel}
+      bio="Dr. Laura Curiel is the Vice President Strategic Development for NovusTx Device, a company founded in 2020. NovusTx Device is working towards developing ultrasound systems for treating neurological psychiatric disorders."
+      review="I came to the FL2F workshop expecting to get some information about entrepreneurship and maybe some tips on where to get started, and what I got was so much more! I acquired skills, built confidence, and learned so much. The workshop not only helped me get started, but it also provided me with tangible tools and a roadmap that I know how to use to get my venture started. "
+      span="It is the most valuable professional development experience I have had in a long time."
+      reviewer="Dr. Laura Curiel, Engineering, University of Calgary"
+    />
+
+    <Success
+      className="success"
+      logo={ligero}
+      participant={drHazay}
+      bio="Ligero was founded with Dr. Carmit Hazay providing secure multiparty computation (MPC) and zero-knowledge proofs (ZKP). Up to now, the company has raised over a million dollars in seed funding."
+      review="The workshop has been professionally delivered while exposing the participants to a variety of interesting tools, which I believe are also useful in daily research."
+      span="Fulfillment is not just about opening a new start-up, and in that sense, the workshop is an important channel for transferring knowledge regarding handling different functions outside academia."
+      reviewer="Dr. Carmit Hazay, Cryptography, Bar-Ilan University"
+    />
   </section>
-
-  <Success
-    className="success"
-    logo={vitaa}
-    participant={drMartino}
-    bio="Dr. Elena Di Martino is the co-founder and CSO of ViTAA Medical Solutions, a company that focuses on precision medicine in patients with abdominal aortic aneurysms."
-    review="For me, the most important thing is to reflect on my role...I've been actively writing patents and getting my creativ juices flowing…I had a patent, of course, to start with, but now we wrot another four...That to me has been the most rewarding part of it..."
-    span="The most important thing for me was to understand what I wanted to do."
-    reviewer="Dr. Elena Di Martino, Civil Engineering Co-Founder and CSO of ViTAA Medical Solutions"
-  />
-
-  <Success
-    className="success success-reverse"
-    logo={novusTX}
-    participant={drCuriel}
-    bio="Dr. Laura Curiel is the Vice President Strategic Development for NovusTx Device, a company founded in 2020. NovusTx Device is working towards developing ultrasound systems for treating neurological psychiatric disorders."
-    review="I came to the FL2F workshop expecting to get some information about entrepreneurship and maybe some tips on where to get started, and what I got was so much more! I acquired skills, built confidence, and learned so much. The workshop not only helped me get started, but it also provided me with tangible tools and a roadmap that I know how to use to get my venture started. "
-    span="It is the most valuable professional development experience I have had in a long time."
-    reviewer="Dr. Laura Curiel, Engineering, University of Calgary"
-  />
-
-  <Success
-    className="success"
-    logo={ligero}
-    participant={drHazay}
-    bio="Ligero was founded with Dr. Carmit Hazay providing secure multiparty computation (MPC) and zero-knowledge proofs (ZKP). Up to now, the company has raised over a million dollars in seed funding."
-    review="The workshop has been professionally delivered while exposing the participants to a variety of interesting tools, which I believe are also useful in daily research."
-    span="Fulfillment is not just about opening a new start-up, and in that sense, the workshop is an important channel for transferring knowledge regarding handling different functions outside academia."
-    reviewer="Dr. Carmit Hazay, Cryptography, Bar-Ilan University"
-  />
 </Layout>
