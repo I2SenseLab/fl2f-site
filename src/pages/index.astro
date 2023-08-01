@@ -1,26 +1,25 @@
 ---
 import Layout from "../layouts/Layout.astro";
 import Showcase from "../components/Showcase.astro";
+import WhatIsFL2F from "../components/WhatIsFL2F.astro";
+import Learned from "../components/Learned.astro";
+import Testimonials from "../components/Testimonials.astro";
+
 import Success from "../components/Success.astro";
 import "../styles/global.scss";
-import "../styles/index.scss";
 
-import Learned from "../components/Learned.astro";
+// //imports for success stories
+// //  first success
+// import vitaa from "../images/logos/vitaa-logo.png";
+// import drMartino from "../images/people/dr.elena-di-martino.png";
 
-//imports for success stories
-//  first success
-import vitaa from "../images/logos/vitaa-logo.png";
-import drMartino from "../images/people/dr.elena-di-martino.png";
+// //  second success
+// import novusTX from "../images/logos/novusTX.png";
+// import drCuriel from "../images/people/dr.laura-curiel.png";
 
-//  second success
-import novusTX from "../images/logos/novusTX.png";
-import drCuriel from "../images/people/dr.laura-curiel.png";
-
-//  third success
-import ligero from "../images/logos/ligero.png";
-import drHazay from "../images/people/dr.carmit-hazay.png";
-import WhatIsFL2F from "../components/WhatIsFL2F.astro";
-import Card from "../components/Card.astro";
+// //  third success
+// import ligero from "../images/logos/ligero.png";
+// import drHazay from "../images/people/dr.carmit-hazay.png";
 ---
 
 <Layout title="FL2F">
@@ -37,7 +36,8 @@ import Card from "../components/Card.astro";
   <Learned />
 
   <!-- Testimonials -->
-  <section class="testimonials">
+  <Testimonials isFeatured={true} />
+  <!-- <section class="testimonials">
     <div class="container">
       <h2>
         We thrive on cultivating the skills women need to start their own
@@ -76,5 +76,5 @@ import Card from "../components/Card.astro";
         />
       </div>
     </div>
-  </section>
+  </section> -->
 </Layout>

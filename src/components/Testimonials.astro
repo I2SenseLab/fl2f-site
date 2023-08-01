@@ -1,18 +1,18 @@
 ---
-import "../styles/ourProjects.scss";
+import "../styles/testimonials.scss";
 
-import * as featured1 from "../content/projects/1-NewHorizon.md";
-import * as featured2 from "../content/projects/2-QuaryPark.md";
-import * as featured3 from "../content/projects/3-FrontStreetMedical.md";
+import * as featured1 from "../content/testimonials/1-DrMartino.md";
+import * as featured2 from "../content/testimonials/2-DrCuriel.md";
+import * as featured3 from "../content/testimonials/3-DrHazay.md";
 import Card from "./Card.astro";
 
-//  first success
-import vitaa from "../images/logos/vitaa-logo.png";
-import drMartino from "../images/people/dr.elena-di-martino.png";
+// //  first success
+// import vitaa from "../images/logos/vitaa-logo.png";
+// import drMartino from "../images/people/dr.elena-di-martino.png";
 
 export interface Props {
-  title: string;
   isFeatured: boolean;
+  title?: string;
 }
 
 const { title, isFeatured } = Astro.props as Props;
@@ -20,14 +20,12 @@ const { title, isFeatured } = Astro.props as Props;
 //get Markdown files for featured, current, and completed projects
 const featuredArr = [featured1, featured2, featured3];
 
-let mapArr = [];
+let mapArr: any[] = featuredArr;
 
 if (!isFeatured) {
   const testimonialsArr = await Astro.glob("../content/testimonials/*.md");
   mapArr = testimonialsArr;
-}
-
-if (isFeatured) {
+} else {
   mapArr = featuredArr;
 }
 ---
@@ -41,24 +39,23 @@ if (isFeatured) {
     <p>Check out some of what our past participants have created!</p>
 
     <div class="grid">
-      {mapArr.map((project) => (
-        <Card
-          logo={project.companyLogo}
-          participantImage={project.image}
-          
-          review={project.review}
-          
-          participant={project.participant}
-        />
-      ))
-      <Card
+      {
+        mapArr.map((project) => (
+          <Card
+            participantImage={project.image}
+            review={project.review}
+            participant={project.description}
+          />
+        ))
+      }
+      <!-- <Card
         logo={vitaa}
         participantImage={drMartino}
         bio="Dr. Elena Di Martino is the co-founder and CSO of ViTAA Medical Solutions, a company that focuses on precision medicine in patients with abdominal aortic aneurysms."
         review="For me, the most important thing is to reflect on my role...I've been actively writing patents and getting my creativ juices flowing…I had a patent, of course, to start with, but now we wrot another four...That to me has been the most rewarding part of it..."
         span="The most important thing for me was to understand what I wanted to do."
         participant="Dr. Elena Di Martino, Civil Engineering Co-Founder and CSO of ViTAA Medical Solutions"
-      />
+      /> -->
 
       <!-- <Success
         className="success success-reverse"
