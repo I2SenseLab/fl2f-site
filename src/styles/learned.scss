@@ -1,6 +1,9 @@
+@import "variables";
+
 .learned {
   text-align: center;
   padding: 5rem;
+  background-color: $primary-color;
   .container {
     h2 {
       margin-bottom: 5rem;
@@ -12,14 +15,14 @@
       align-items: flex-start;
       flex-wrap: wrap;
       margin: 0 auto;
-      max-width: 1000px;
+      max-width: 1200px;
       gap: 3rem 2rem;
       .icon {
         img {
           max-width: 165px;
         }
         p {
-          max-width: 165px;
+          width: 190px;
         }
       }
     }
