@@ -1,0 +1,27 @@
+.learned {
+  text-align: center;
+  padding: 5rem;
+  .container {
+    h2 {
+      margin-bottom: 5rem;
+    }
+
+    .flex {
+      display: flex;
+      justify-content: center;
+      align-items: flex-start;
+      flex-wrap: wrap;
+      margin: 0 auto;
+      max-width: 1000px;
+      gap: 3rem 2rem;
+      .icon {
+        img {
+          max-width: 165px;
+        }
+        p {
+          max-width: 165px;
+        }
+      }
+    }
+  }
+}
