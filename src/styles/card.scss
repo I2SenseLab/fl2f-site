@@ -3,18 +3,26 @@
 .card {
   @include flex-center;
   background-color: #fff;
-  border: 2px solid $secondary-color;
+  border: 2px solid $primary-color;
   border-radius: 5px;
+  box-shadow: 5px 5px 10px $primary-color;
+  padding: 1rem 2rem;
+  gap: 1rem;
 
   .left {
-    .participant {
-      img {
-        max-width: 260px;
-        aspect-ratio: 2 / 3;
-      }
+    img {
+      max-width: 200px;
+
+      aspect-ratio: 13 / 16;
     }
   }
-  .review {
+  .right {
+    text-align: left;
+    max-width: 400px;
+    p {
+      font-size: 1rem;
+      font-weight: 400;
+    }
   }
 }
 
