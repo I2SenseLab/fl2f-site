@@ -1,14 +1,14 @@
-@import "variables";
+@import "./variables";
 
 .text {
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  text-align: center;
   padding: 5rem;
 
   h2 {
+    text-align: center;
     color: $secondary-color;
   }
 
@@ -22,5 +22,12 @@
       font-weight: 700;
       font-size: 1.5rem;
     }
+  }
+
+  iframe {
+    height: 600px;
+    width: 1000px;
+    object-fit: cover;
+    margin-top: 1rem;
   }
 }
