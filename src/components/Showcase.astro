@@ -33,7 +33,11 @@ const {
   {overlayLight && <div class="overlay-light" />}
   <div class="showcase-image">
     <img
-      src={verticalImage}
+      srcset=`
+       ${verticalImage}  400w,
+       ${image}  800w`
+      ;
+      src={image}
       alt="showcase Image"
       loading="eager"
       role="presentation"
