@@ -2,6 +2,7 @@
 import "../styles/showcase.scss";
 export interface Props {
   image: string;
+  verticalImage?: string;
   heading?: string;
   text?: string;
   showExtra?: boolean;
@@ -10,17 +11,33 @@ export interface Props {
 }
 const {
   image,
+  verticalImage,
   heading = "Women in STEM/Health creating more impact and fulfilment - we make it happen!",
   overlay,
   overlayLight,
 } = Astro.props as Props;
+
+// srcset=`
+//       https://placehold.co/400X100/png 400w,
+//       https://placehold.co/800X200/png 800w,
+//       https://placehold.co/1600X400/png 1600w
+//       `
+
+// srcset = `
+//        ${verticalImage}  400w,
+//        ${image}  800w`;
 ---
 
 <section class="showcase">
   {overlay && <div class="overlay" />}
   {overlayLight && <div class="overlay-light" />}
   <div class="showcase-image">
-    <img src={image} alt="showcase Image" loading="eager" />
+    <img
+      src={verticalImage}
+      alt="showcase Image"
+      loading="eager"
+      role="presentation"
+    />
   </div>
 
   <div class="container">
