@@ -123,6 +123,12 @@ h2 {
   }
 }
 
+@media screen and (max-width: 660px) {
+  .container {
+    padding: 0;
+  }
+}
+
 @media (max-width: 500px) {
   h2 {
     text-align: center;
