@@ -9,14 +9,14 @@
       font-weight: 600;
       color: $secondary-color;
     }
+    h3 {
+      font-size: 1.5rem;
+      margin: 1.3rem 0 1rem;
+    }
 
     .text {
       p {
         font-size: 1rem;
-      }
-      h3 {
-        font-size: 1.5rem;
-        margin: 1.3rem 0 1rem;
       }
       li {
         color: $secondary-color;
@@ -70,6 +70,32 @@
 
     .results {
       grid-column: 1 / span 2;
+      margin: 2rem 0 5rem;
+      text-align: center;
+
+      h3 {
+        font-size: 2rem;
+      }
+
+      .flex {
+        @include flex-between;
+        margin-top: 2rem;
+        .num {
+          max-width: 325px;
+          min-height: 172px;
+
+          &:nth-child(1) {
+            h2 {
+              color: $yellow-color;
+            }
+          }
+          &:nth-child(2) {
+            h2 {
+              color: $second-light;
+            }
+          }
+        }
+      }
     }
   }
 }
