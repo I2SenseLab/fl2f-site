@@ -43,6 +43,9 @@
     &:nth-child(even) {
       flex-direction: row-reverse;
     }
+    &:nth-child(n + 4) {
+      display: none;
+    }
     .left {
       max-width: 30%;
     }
