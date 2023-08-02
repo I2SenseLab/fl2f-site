@@ -26,3 +26,52 @@
     }
   }
 }
+
+@media screen and (max-width: 930px) {
+  .testimonials {
+    padding: 3rem 2rem;
+    .container {
+      h2 {
+        font-size: 2.5rem;
+      }
+      .grid {
+        grid-template-columns: 1fr;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 660px) {
+  .testimonials {
+    .container {
+      h2 {
+        font-size: 2rem;
+      }
+      p {
+        font-size: 1.2rem;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 440px) {
+  .testimonials {
+    padding: 3rem 1rem;
+    .container {
+      padding: 0;
+    }
+  }
+}
+
+@media screen and (max-width: 388px) {
+  .testimonials {
+    .container {
+      h2 {
+        font-size: 1.5rem;
+      }
+      p {
+        font-size: 1rem;
+      }
+    }
+  }
+}
