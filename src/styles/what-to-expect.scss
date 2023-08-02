@@ -36,5 +36,30 @@
         }
       }
     }
+
+    .schedule {
+      text-align: center;
+
+      .download {
+        a {
+          font-size: 0.9rem;
+          font-weight: 500;
+          color: $secondary-color;
+        }
+      }
+      .photos {
+        img {
+          max-width: 550px;
+        }
+      }
+      .sub-schedule {
+        p {
+          text-align: left;
+          max-width: 550px;
+          margin: 10px auto;
+          font-size: 1rem;
+        }
+      }
+    }
   }
 }

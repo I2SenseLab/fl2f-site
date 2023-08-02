@@ -1,5 +1,7 @@
 # Main static Website for FL2F
 
+- Testimonials page is located at [/testimonials](https://www.fl2f.ca/testimonials)
+
 ### Todo
 
 1. change video embed iframe to @astro-community/astro-embed-youtube when they release support for typescript
