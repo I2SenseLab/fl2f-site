@@ -1,5 +1,5 @@
 ---
-title: Dr. Laura Curiel, Engineering, University of Calgary
+title: Dr. Laura Curiel, Engineering, Vice President Strategic Development for NovusTx Device
 description: Dr. Laura Curiel is the Vice President Strategic Development for NovusTx Device, a company founded in 2020. NovusTx Device is working towards developing ultrasound systems for treating neurological psychiatric disorders.
 image: /images/people/dr.laura-curiel.jpg
 

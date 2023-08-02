@@ -4,6 +4,9 @@ import "../styles/testimonials.scss";
 import * as featured1 from "../content/testimonials/1-DrDiMartino.md";
 import * as featured2 from "../content/testimonials/2-DrCuriel.md";
 import * as featured3 from "../content/testimonials/3-DrHazay.md";
+import * as featured4 from "../content/testimonials/4-DrFear.md";
+import * as featured5 from "../content/testimonials/5-DrHeyne.md";
+import * as featured6 from "../content/testimonials/6-DrShefi.md";
 import Card from "./Card.astro";
 
 // //  first success
@@ -18,7 +21,14 @@ export interface Props {
 const { title, isFeatured } = Astro.props as Props;
 
 //get Markdown files for featured, current, and completed projects
-const featuredArr = [featured1, featured2, featured3];
+const featuredArr = [
+  featured1,
+  featured2,
+  featured3,
+  featured4,
+  featured5,
+  featured6,
+];
 
 let mapArr: any[] = featuredArr;
 

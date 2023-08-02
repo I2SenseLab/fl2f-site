@@ -1,5 +1,5 @@
 ---
-title: Dr. Elena Di Martino, Civil Engineering Co-Founder and CSO of ViTAA Medical Solutions
+title: Dr. Elena Di Martino, Civil Engineering, Co-Founder & CSO of ViTAA Medical Solutions
 description: Dr. Elena Di Martino is the co-founder and CSO of ViTAA Medical Solutions, a company that focuses on precision medicine in patients with abdominal aortic aneurysms.
 image: /images/people/dr.elena-di-martino.jpeg
 
