@@ -17,3 +17,16 @@
     }
   }
 }
+
+@media screen and (max-width: 388px) {
+  .learn-more {
+    .container {
+      h2 {
+        font-size: 1.5rem;
+      }
+      button {
+        width: 100%;
+      }
+    }
+  }
+}
