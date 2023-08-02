@@ -1,0 +1,14 @@
+@import "variables";
+
+.subheading {
+  text-align: center;
+  padding: 5rem 3rem;
+  h3 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    color: $secondary-color;
+  }
+  p {
+    text-align: left;
+  }
+}

@@ -2,6 +2,7 @@
 import Layout from "../layouts/Layout.astro";
 import Showcase from "../components/Showcase.astro";
 import WhatToExpect from "../components/WhatToExpect.astro";
+import "../styles/about.scss";
 ---
 
 <Layout title="Our Program">
@@ -13,17 +14,20 @@ import WhatToExpect from "../components/WhatToExpect.astro";
   />
   <!-- Below Showcase -->
   <div class="subheading">
-    <h3>
-      The FL2F online program empowers you to transform your ideas into
-      successful products through comprehensive training and guidance.
-    </h3>
-    <p>
-      You will gain valuable skills, receive expert support, and have networking
-      opportunities to navigate the entrepreneurial landscape and pursue your
-      pathway to success, all within a transformative learning experience that
-      fosters innovation and empowers you to thrive in product development and
-      entrepreneurship!
-    </p>
+    <div class="container">
+      <h3>
+        The FL2F online program empowers you to transform your ideas into
+        successful products through comprehensive training and guidance.
+      </h3>
+      <p>
+        You will gain valuable skills, receive expert support, and have
+        networking opportunities to navigate the entrepreneurial landscape and
+        pursue your pathway to success, all within a transformative learning
+        experience that fosters innovation and empowers you to thrive in product
+        development and entrepreneurship!
+      </p>
+      <a href="/apply"><button class="btn btn-add">Apply</button></a>
+    </div>
   </div>
 
   <WhatToExpect />
