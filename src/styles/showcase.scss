@@ -39,6 +39,11 @@
     .showcase-text {
       max-width: 1400px;
       margin-bottom: 5rem;
+
+      &.not-home {
+        text-transform: uppercase;
+        margin-bottom: 10rem;
+      }
       h1 {
         font-size: 50px;
 

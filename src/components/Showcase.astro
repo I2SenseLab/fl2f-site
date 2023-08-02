@@ -8,6 +8,7 @@ export interface Props {
   showExtra?: boolean;
   overlay?: boolean;
   overlayLight?: boolean;
+  home?: boolean;
 }
 const {
   image,
@@ -15,6 +16,7 @@ const {
   heading = "Women in STEM/Health creating more impact and fulfilment - we make it happen!",
   overlay,
   overlayLight,
+  home,
 } = Astro.props as Props;
 
 // srcset=`
@@ -45,10 +47,18 @@ const {
   </div>
 
   <div class="container">
-    <div class="showcase-text">
-      <h1>{heading}</h1>
+    {
+      home ? (
+        <div class="showcase-text">
+          <h1>{heading}</h1>
 
-      <button class="btn btn-add">Apply</button>
-    </div>
+          <button class="btn btn-add">Apply</button>
+        </div>
+      ) : (
+        <div class="showcase-text not-home">
+          <h1>{heading}</h1>
+        </div>
+      )
+    }
   </div>
 </section>

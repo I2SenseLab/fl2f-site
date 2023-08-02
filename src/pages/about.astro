@@ -1,14 +1,30 @@
 ---
-import Showcase from "../components/Showcase.astro";
 import Layout from "../layouts/Layout.astro";
+import Showcase from "../components/Showcase.astro";
+import WhatToExpect from "../components/WhatToExpect.astro";
 ---
 
 <Layout title="Our Program">
   <Showcase
     image="/images/showcase.avif"
-    overlayLight={true}
+    overlay={true}
     verticalImage="/images/showcase-vertical.jpeg"
     heading="Our Program"
   />
-  <h1>This is the about page</h1>
+  <!-- Below Showcase -->
+  <div class="subheading">
+    <h3>
+      The FL2F online program empowers you to transform your ideas into
+      successful products through comprehensive training and guidance.
+    </h3>
+    <p>
+      You will gain valuable skills, receive expert support, and have networking
+      opportunities to navigate the entrepreneurial landscape and pursue your
+      pathway to success, all within a transformative learning experience that
+      fosters innovation and empowers you to thrive in product development and
+      entrepreneurship!
+    </p>
+  </div>
+
+  <WhatToExpect />
 </Layout>
