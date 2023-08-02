@@ -36,3 +36,19 @@
     }
   }
 }
+
+@media screen and (max-width: 1150px) {
+  .card {
+    flex-direction: row;
+    &:nth-child(even) {
+      flex-direction: row-reverse;
+    }
+    .left {
+      max-width: 30%;
+    }
+    .right {
+      .title {
+      }
+    }
+  }
+}
