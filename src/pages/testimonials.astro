@@ -1,6 +1,7 @@
 ---
-import Showcase from "../components/Showcase.astro";
 import Layout from "../layouts/Layout.astro";
+import Showcase from "../components/Showcase.astro";
+import Testimonials from "../components/Testimonials.astro";
 import "../styles/testimonials.scss";
 ---
 
@@ -11,7 +12,7 @@ import "../styles/testimonials.scss";
     verticalImage="/images/showcase-vertical.jpeg"
     heading="Testimonials"
   />
-  <section class="testimonials-page">
+  <section class="testimonials-video">
     <div class="container">
       <h2>My FL2F Journey, (Alumni, 2020)</h2>
 
@@ -23,4 +24,9 @@ import "../styles/testimonials.scss";
         allowfullscreen></iframe>
     </div>
   </section>
+
+  <!-- Testimonials -->
+  <div>
+    <Testimonials isFeatured={false} title="What Do Our Alumni Say?" />
+  </div>
 </Layout>
