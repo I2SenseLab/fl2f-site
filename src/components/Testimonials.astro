@@ -33,7 +33,7 @@ let mapArr: any[] = featuredArr;
 
 if (!isFeatured) {
   const testimonialsArr = await Astro.glob("../content/testimonials/*.md");
-  mapArr = testimonialsArr;
+  mapArr = testimonialsArr.slice(6);
 } else {
   mapArr = featuredArr;
 }
