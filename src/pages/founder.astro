@@ -1,6 +1,9 @@
 ---
 import Showcase from "../components/Showcase.astro";
 import Layout from "../layouts/Layout.astro";
+import oyp from "/images/people/oyp.jpeg";
+import luxmux from "/images/logos/luxmux-logo.webp";
+import eatLittle from "/images/logos/eatlittle.png";
 import "../styles/founder.scss";
 ---
 
@@ -13,6 +16,91 @@ import "../styles/founder.scss";
   />
 
   <div class="founder">
-    <div class="container"></div>
+    <div class="container">
+      <div class="left">
+        <div class="image">
+          <a
+            href="https://www.ucalgary.ca/labs/integrated-intelligent-sensing/dr-orly-yadid-pecht"
+            ><img src={oyp} alt="Photo of Dr. Yadid-Pecht" loading="lazy" /></a
+          >
+        </div>
+        <div class="image">
+          <a href="https://luxmux.com/"
+            ><img src={luxmux} alt="Logo for Luxmux" loading="lazy" /></a
+          >
+        </div>
+        <div class="image">
+          <a href="https://www.eatlittle.com/"
+            ><img src={eatLittle} alt="Logo for Eat-Little" loading="lazy" /></a
+          >
+        </div>
+      </div>
+      <div class="right">
+        <p>
+          Dr. Orly Yadid-Pecht is an Electrical Engineering Professor at the
+          University of Calgary and AITF Strategic Chair in Integrated
+          Intelligent Sensors (I2Sense, formerly ISIS labs). Holding over 30
+          patents, she has also co-founded two successful start-ups (Luxmux,
+          EatLittle). Most of her patents are licensed to companies worldwide.
+        </p>
+        <p>
+          In 2016, Dr. Yadid-Pecht added to her resume becoming a certified
+          coach (Newfield, USA) which put her on the path to create FL2F. Dr.
+          Yadid-Pecht also acts as a consultant to law firms, VCs, and
+          technology companies.
+        </p>
+        <p>Some sample awards bestowed on her include:</p>
+        <ul>
+          <li>
+            <span>2023 Engineering Institute of Canada (EIC) Fellowship</span>
+          </li>
+
+          <li>
+            <span>
+              2022 Distinguished Research Leadership Award, Schulich School of
+              Engineering
+            </span>
+          </li>
+
+          <li>
+            <span>2019 Parex Innovation Fellowship, University of Calgary</span>
+          </li>
+
+          <li>
+            <span>
+              2018 Alberta Science and Technology (ASTech) Award for Technology
+              Leadership
+            </span>
+          </li>
+
+          <li>
+            <span>
+              2018 Fellow of the American Institute for Medical and Biological
+              Engineering (AIMBE)
+            </span>
+          </li>
+
+          <li>
+            <span>2016 Great Supervisor Award, University of Calgary</span>
+          </li>
+
+          <li><span>2015 Fellow of SPIE</span></li>
+
+          <li>
+            <span>
+              2015 ASTech Outstanding Science and Technology Start-up (Luxmux
+              Inc.)
+            </span>
+          </li>
+
+          <li>
+            <span>
+              2007 Fellow of the Institute of Electrical and Electronics
+              Engineers (IEEE)
+            </span>
+          </li>
+        </ul>
+      </div>
+    </div>
   </div>
 </Layout>

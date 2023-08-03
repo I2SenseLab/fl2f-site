@@ -1,0 +1,22 @@
+@import "variables";
+
+.founder {
+  .container {
+    .image {
+      max-width: 250px;
+      margin: 3rem 0;
+      img {
+        width: 100%;
+      }
+    }
+    .right {
+      li {
+        list-style-type: disc;
+        color: $secondary-color;
+        span {
+          color: #000;
+        }
+      }
+    }
+  }
+}
