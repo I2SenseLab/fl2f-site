@@ -52,5 +52,15 @@
   }
 
   .awards {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 2rem;
+    .image {
+      max-width: 300px;
+      img {
+        width: 100%;
+      }
+    }
   }
 }
