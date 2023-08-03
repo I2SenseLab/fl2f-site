@@ -52,10 +52,10 @@
   }
 
   .awards {
-    display: flex;
+    @include flex-center;
     flex-wrap: wrap;
-    align-items: center;
     gap: 2rem;
+    margin-top: 3rem;
     .image {
       max-width: 300px;
       img {
