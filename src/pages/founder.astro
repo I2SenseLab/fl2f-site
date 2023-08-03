@@ -1,0 +1,18 @@
+---
+import Showcase from "../components/Showcase.astro";
+import Layout from "../layouts/Layout.astro";
+import "../styles/founder.scss";
+---
+
+<Layout title="Our Founder">
+  <Showcase
+    image="/images/showcase.avif"
+    overlay={true}
+    verticalImage="/images/showcase-vertical.jpeg"
+    heading="Our Founder"
+  />
+
+  <div class="founder">
+    <div class="container"></div>
+  </div>
+</Layout>
