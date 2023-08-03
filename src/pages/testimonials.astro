@@ -1,0 +1,26 @@
+---
+import Showcase from "../components/Showcase.astro";
+import Layout from "../layouts/Layout.astro";
+import "../styles/testimonials.scss";
+---
+
+<Layout title="testimonials">
+  <Showcase
+    image="/images/showcase.avif"
+    overlay={true}
+    verticalImage="/images/showcase-vertical.jpeg"
+    heading="Testimonials"
+  />
+  <section class="testimonials-page">
+    <div class="container">
+      <h2>My FL2F Journey, (Alumni, 2020)</h2>
+
+      <iframe
+        src="https://www.youtube-nocookie.com/embed/gUwa3cEYrNE"
+        frameborder="0"
+        title="FL2F Alumni Testimonial Video"
+        frameborder="0"
+        allowfullscreen></iframe>
+    </div>
+  </section>
+</Layout>
