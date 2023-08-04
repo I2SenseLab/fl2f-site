@@ -9,13 +9,6 @@ import * as featured5 from "../content/testimonials/5-DrCuriel.md";
 import * as featured4 from "../content/testimonials/4-DrHazay.md";
 import * as featured6 from "../content/testimonials/6-DrFear.md";
 
-// institute recommendations page
-// import * as recommended1 from "../content/recommended/1-Banting.md";
-// import * as recommended2 from "../content/recommended/2-Kilcrease.md";
-// import * as recommended3 from "../content/recommended/3-Zehavi.md";
-// import * as recommended4 from "../content/recommended/4-Skone.md";
-// import * as recommended5 from "../content/recommended/5-Barlow.md";
-
 import Card from "./Card.astro";
 
 export interface Props {
@@ -36,21 +29,12 @@ const featuredArr = [
   featured6,
 ];
 
-// const recommendedArr = [
-//   recommended1,
-//   recommended2,
-//   recommended3,
-//   recommended4,
-//   recommended5,
-// ];
-
 let mapArr: any[] = featuredArr;
 if (recommendations && !isFeatured) {
   const recommendedArr = await Astro.glob("../content/recommended/*.md");
   mapArr = recommendedArr.sort((a, b) => {
     return a.frontmatter.order - b.frontmatter.order;
   });
-  return;
 } else if (!isFeatured) {
   const testimonialsArr = await Astro.glob("../content/testimonials/*.md");
   mapArr = testimonialsArr.sort((a, b) => {
