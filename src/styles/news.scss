@@ -3,7 +3,11 @@
 .certificates {
   padding: 2rem 0;
   .event {
-    padding: 3rem 0;
+    padding-top: 3rem;
+
+    &:nth-child(2) {
+      padding-bottom: 5rem;
+    }
     .awards {
       .image {
         max-width: 500px;
@@ -16,7 +20,7 @@
 
   .featured {
     background-color: $primary-color;
-    padding: 2rem;
+    padding: 5rem 2rem;
     h2 {
       a {
         border-bottom: 2px solid $secondary-color;
@@ -32,9 +36,16 @@
   }
 
   .invited {
-    margin-top: 3rem;
+    margin: 3rem 0 5rem;
+    text-align: center;
     .card {
       margin: 2rem 0;
+    }
+
+    iframe {
+      margin-top: 2rem;
+      width: 1024px;
+      height: 576px;
     }
   }
 }
