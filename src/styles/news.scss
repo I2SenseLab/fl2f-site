@@ -1,0 +1,40 @@
+@import "variables";
+
+.certificates {
+  padding: 2rem 0;
+  .event {
+    padding: 3rem 0;
+    .awards {
+      .image {
+        max-width: 500px;
+      }
+    }
+  }
+  h2 {
+    text-align: center;
+  }
+
+  .featured {
+    background-color: $primary-color;
+    padding: 2rem;
+    h2 {
+      a {
+        border-bottom: 2px solid $secondary-color;
+        &:hover {
+          opacity: 0.6;
+        }
+      }
+    }
+    .subheading {
+      max-width: 800px;
+      margin: 2rem auto;
+    }
+  }
+
+  .invited {
+    margin-top: 3rem;
+    .card {
+      margin: 2rem 0;
+    }
+  }
+}

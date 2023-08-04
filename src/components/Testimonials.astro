@@ -50,7 +50,11 @@ if (recommendations && !isFeatured) {
     <h2>
       {title}
     </h2>
-    <p>Check out some of what our past participants have created!</p>
+    {
+      !recommendations && (
+        <p>Check out some of what our past participants have created!</p>
+      )
+    }
 
     <div class="grid">
       {

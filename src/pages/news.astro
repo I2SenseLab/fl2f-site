@@ -12,6 +12,9 @@ import biu from "/images/group-photos/biu.png";
 import uofc2021 from "/images/group-photos/uofc2021.png";
 import uofcalumni from "/images/group-photos/uofcalumni.png";
 import uofcalumni2 from "/images/group-photos/uofcalumni2.png";
+import Card from "../components/Card.astro";
+
+import "../styles/news.scss";
 ---
 
 <Layout title="News">
@@ -22,37 +25,84 @@ import uofcalumni2 from "/images/group-photos/uofcalumni2.png";
     heading="News & Events"
   />
 
-  <section class="certificates">
-    <div class="container">
-      <div class="awards">
-        <div class="image">
-          <img src={panAlberta} alt="Pan Alberta Group Photo" loading="lazy" />
-        </div>
-        <div class="image">
-          <img src={erin} alt="Erin Group Photo" loading="lazy" />
-        </div>
-        <div class="image">
-          <img src={queens} alt="Queens Group Photo" loading="lazy" />
-        </div>
-        <div class="image">
-          <img src={uofc} alt="U of C Group Photo" loading="lazy" />
-        </div>
-        <div class="image">
-          <img src={stem} alt="Stem Group Photo" loading="lazy" />
-        </div>
-        <div class="image">
-          <img src={biu} alt="BIU Group Photo" loading="lazy" />
-        </div>
-        <div class="image">
-          <img src={uofc2021} alt="U of C 2021 Group Photo" loading="lazy" />
-        </div>
-        <div class="image">
-          <img src={uofcalumni} alt="Alumni Group Photo" loading="lazy" />
-        </div>
-        <div class="image">
-          <img src={uofcalumni2} alt="Alumni Group Photo" loading="lazy" />
+  <div class="certificates">
+    <section class="event">
+      <div class="container">
+        <h2>Certificate Events</h2>
+        <div class="awards">
+          <div class="image">
+            <img
+              src={panAlberta}
+              alt="Pan Alberta Group Photo"
+              loading="lazy"
+            />
+          </div>
+          <div class="image">
+            <img src={erin} alt="Erin Group Photo" loading="lazy" />
+          </div>
+          <div class="image">
+            <img src={queens} alt="Queens Group Photo" loading="lazy" />
+          </div>
+          <div class="image">
+            <img src={uofc} alt="U of C Group Photo" loading="lazy" />
+          </div>
+          <div class="image">
+            <img src={stem} alt="Stem Group Photo" loading="lazy" />
+          </div>
+          <div class="image">
+            <img src={biu} alt="BIU Group Photo" loading="lazy" />
+          </div>
+          <div class="image">
+            <img src={uofc2021} alt="U of C 2021 Group Photo" loading="lazy" />
+          </div>
         </div>
       </div>
-    </div>
-  </section>
+    </section>
+    <section class="event">
+      <div class="container">
+        <h2>Alumni Events</h2>
+        <div class="awards">
+          <div class="image">
+            <img src={uofcalumni} alt="Alumni Group Photo" loading="lazy" />
+          </div>
+          <div class="image">
+            <img src={uofcalumni2} alt="Alumni Group Photo" loading="lazy" />
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="featured">
+      <div class="container">
+        <p>October 11, 2022</p>
+        <h2>
+          FL2F was featured on <a
+            href="https://www.ucalgary.ca/news/workshops-designed-one-purpose-guiding-women-entrepreneurial-landscape"
+            >UCalgary News</a
+          >
+        </h2>
+        <p class="subheading">
+          We would like to thank the UToday team for interviewing our founder,
+          Dr. Orly Yadid-Pecht, and featuring the From Lab 2 Fulfillment (FL2F)
+          program on UCalgary News.
+        </p>
+      </div>
+    </section>
+
+    <section class="invited">
+      <div class="container">
+        <h2>Invited Talks</h2>
+        <Card
+          participantImage="/images/logos/iscas.png"
+          review="Last October, Dr. Yadid-Pecht gave a keynote lecture at the IEEE ISCAS (International Symposium on Circuits and Systems) 2020 virtual conference in Spain, introducing the FL2F workshop and its results as part of a WiCAS (Women in Circuits and Systems) Session."
+          title="WiCAS Invited Session October 2020"
+        />
+        <iframe
+          src="https://www.youtube-nocookie.com/embed/TDOCPAMYQ2M"
+          title="WiCAS Session Video"
+          frameborder="0"
+          allowfullscreen></iframe>
+      </div>
+    </section>
+  </div>
 </Layout>

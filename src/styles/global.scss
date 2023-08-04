@@ -110,6 +110,19 @@ h2 {
   font-size: 25px;
 }
 
+.awards {
+  @include flex-center;
+  flex-wrap: wrap;
+  gap: 2rem;
+  margin-top: 3rem;
+  .image {
+    max-width: 300px;
+    img {
+      width: 100%;
+    }
+  }
+}
+
 @media (max-width: 960px) {
   .logos-small {
     display: block;
