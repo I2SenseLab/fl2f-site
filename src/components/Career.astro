@@ -17,7 +17,7 @@ import "../styles/career.scss";
       <div class="left">
         <h2>{title}</h2>
         <!-- <h2 class="icon">&#94;</h2> -->
-        <div class="icon">
+        <div class="icon" id="icon">
           <h2>></h2>
         </div>
       </div>
@@ -25,6 +25,16 @@ import "../styles/career.scss";
     </div>
     <div class="content">
       <Content />
+      <div class="interested">
+        <h3>Interested?</h3>
+        <a href={link}><button class="btn btn-primary">Apply</button></a>
+        <p>
+          <em>
+            We thank all candidates for submitting their applications. Only
+            candidates chosen for the next step will be contacted.
+          </em>
+        </p>
+      </div>
     </div>
   </div>
 </section>

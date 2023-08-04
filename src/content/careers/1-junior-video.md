@@ -35,15 +35,11 @@ FL2F is seeking an enthusiastic and highly motivated Junior Video Editor to join
 
 ### Benefits of working with us:
 
-We are constantly upleveling our team, and we believe you can grow with us and scale the program further
+- We are constantly upleveling our team, and we believe you can grow with us and scale the program further
 
-We are the catalyst for you to become who you want to be at this stage of your career
+- We are the catalyst for you to become who you want to be at this stage of your career
 
-We are an entrepreneurial organization, so we create significant results quickly
-
-Interested? Please click on "Apply" and fill in your application.
-
-_We thank all candidates for submitting their applications. Only candidates chosen for the next step will be contacted._
+- We are an entrepreneurial organization, so we create significant results quickly
 
 ### Location
 

@@ -32,5 +32,28 @@
         width: 15%;
       }
     }
+    .content {
+      margin-top: 3rem;
+      h3 {
+        font-size: 2rem;
+        margin-bottom: 1rem;
+      }
+
+      ul {
+        li {
+          list-style-type: disc;
+          margin-left: 2rem;
+        }
+      }
+
+      .interested {
+        margin: 3rem 0;
+        text-align: center;
+
+        .btn-primary {
+          max-width: 500px;
+        }
+      }
+    }
   }
 }
