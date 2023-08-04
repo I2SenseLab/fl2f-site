@@ -2,6 +2,7 @@
 
 .career {
   padding: 3rem 2rem;
+  min-height: 50vh;
 
   .container {
     .title {
@@ -26,6 +27,10 @@
             background: rgba(0, 0, 0, 0.1);
             border-radius: 50%;
           }
+
+          &.rotate {
+            rotate: -90deg;
+          }
         }
       }
       a {
@@ -34,6 +39,10 @@
     }
     .content {
       margin-top: 3rem;
+
+      &.hidden {
+        display: none;
+      }
       h3 {
         font-size: 2rem;
         margin-bottom: 1rem;

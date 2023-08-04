@@ -23,7 +23,7 @@ import "../styles/career.scss";
       </div>
       <a href={link}><button class="btn btn-primary">Apply</button></a>
     </div>
-    <div class="content">
+    <div class="content hidden">
       <Content />
       <div class="interested">
         <h3>Interested?</h3>
@@ -38,3 +38,13 @@ import "../styles/career.scss";
     </div>
   </div>
 </section>
+
+<script>
+  const icon = document.getElementById("icon") as HTMLDivElement;
+  const content = document.querySelector(".content") as HTMLDivElement;
+
+  icon.addEventListener("click", () => {
+    content.classList.toggle("hidden");
+    icon.classList.toggle("rotate");
+  });
+</script>
