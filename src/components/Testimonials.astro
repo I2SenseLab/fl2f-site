@@ -13,7 +13,7 @@ import * as featured6 from "../content/testimonials/6-DrFear.md";
 import * as recommended1 from "../content/recommended/1-Banting.md";
 import * as recommended2 from "../content/recommended/2-Kilcrease.md";
 import * as recommended3 from "../content/recommended/3-Zehavi.md";
-import * as recommended4 from "../content/recommended/6-Skone.md";
+import * as recommended4 from "../content/recommended/4-Skone.md";
 import * as recommended5 from "../content/recommended/5-Barlow.md";
 
 import Card from "./Card.astro";
@@ -24,11 +24,7 @@ export interface Props {
   recommendations?: boolean;
 }
 
-const {
-  title = "We thrive on cultivating the skills women need to start their own businesses.",
-  isFeatured,
-  recommendations,
-} = Astro.props as Props;
+const { title, isFeatured, recommendations } = Astro.props as Props;
 
 //get Markdown files for featured, current, and completed projects
 const featuredArr = [

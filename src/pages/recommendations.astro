@@ -2,6 +2,7 @@
 import "../styles/recommendations.scss";
 import Layout from "../layouts/Layout.astro";
 import Showcase from "../components/Showcase.astro";
+import Testimonials from "../components/Testimonials.astro";
 ---
 
 <Layout title="Recommendations">
@@ -11,4 +12,6 @@ import Showcase from "../components/Showcase.astro";
     verticalImage="/images/showcase-vertical.jpeg"
     heading="Recommendations"
   />
+
+  <Testimonials isFeatured={false} recommendations={true} />
 </Layout>
