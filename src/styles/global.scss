@@ -110,6 +110,12 @@ h2 {
   font-size: 25px;
 }
 
+iframe {
+  margin-top: 2rem;
+  width: 1024px;
+  height: 576px;
+}
+
 .awards {
   @include flex-center;
   flex-wrap: wrap;
@@ -120,6 +126,13 @@ h2 {
     img {
       width: 100%;
     }
+  }
+}
+
+@media screen and (max-width: 1088px) {
+  iframe {
+    height: 360px;
+    width: 600px;
   }
 }
 
@@ -141,10 +154,20 @@ h2 {
   .container {
     padding: 0;
   }
+  iframe {
+    min-height: 400px;
+    width: 100%;
+  }
 }
 
 @media (max-width: 500px) {
   h2 {
     text-align: center;
+  }
+}
+
+@media screen and (max-width: 375px) {
+  iframe {
+    min-height: unset;
   }
 }
