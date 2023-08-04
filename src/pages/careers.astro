@@ -1,0 +1,20 @@
+---
+import Layout from "../layouts/Layout.astro";
+import Showcase from "../components/Showcase.astro";
+import Career from "../components/Career.astro";
+import "../styles/about.scss";
+---
+
+<Layout title="Careers">
+  <Showcase
+    image="/images/showcase.avif"
+    overlay={true}
+    verticalImage="/images/showcase-vertical.jpeg"
+    heading="We're Hiring"
+  />
+
+  <Career />
+  <Career />
+  <Career />
+  <Career />
+</Layout>
