@@ -1,8 +1,30 @@
 ---
+import { AstroComponentFactory } from "astro/dist/runtime/server";
+export interface Props {
+  title: string;
+  Content: AstroComponentFactory;
+  link: string;
+}
+
+const { title, Content, link } = Astro.props as Props;
+
+import "../styles/career.scss";
 ---
 
 <section class="career">
   <div class="container">
-    <h2>Career</h2>
+    <div class="title">
+      <div class="left">
+        <h2>{title}</h2>
+        <!-- <h2 class="icon">&#94;</h2> -->
+        <div class="icon">
+          <h2>></h2>
+        </div>
+      </div>
+      <a href={link}><button class="btn btn-primary">Apply</button></a>
+    </div>
+    <div class="content">
+      <Content />
+    </div>
   </div>
 </section>

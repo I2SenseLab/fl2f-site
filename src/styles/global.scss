@@ -82,6 +82,12 @@ h2 {
   &-add {
     background-color: $yellow-color;
   }
+  &-primary {
+    background-color: $primary-color;
+    color: #000;
+    width: 100%;
+    max-width: 200px;
+  }
   &-secondary {
     background-color: $secondary-color;
     color: #fff;

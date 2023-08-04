@@ -2,6 +2,10 @@
 
 - Testimonials page is located at [/testimonials](https://www.fl2f.ca/testimonials)
 
+- to add/ remove testimonials, go to content, the testimonials folder, and create/delete the markdown file
+
+  - the same goes for adding and removing jobs in the careers page, as well as the recommendations in the recommendations page
+
 ### Todo
 
 1. change video embed iframe to @astro-community/astro-embed-youtube when they release support for typescript

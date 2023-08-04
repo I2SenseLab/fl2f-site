@@ -3,6 +3,8 @@ import Layout from "../layouts/Layout.astro";
 import Showcase from "../components/Showcase.astro";
 import Career from "../components/Career.astro";
 import "../styles/about.scss";
+
+const careersArr = await Astro.glob("../content/careers/*.md");
 ---
 
 <Layout title="Careers">
@@ -13,8 +15,11 @@ import "../styles/about.scss";
     heading="We're Hiring"
   />
 
-  <Career />
-  <Career />
-  <Career />
-  <Career />
+  {
+    careersArr.map((career) => {
+      const { title, link } = career.frontmatter;
+      const Content = career.Content;
+      return <Career title={title} Content={Content} link={link} />;
+    })
+  }
 </Layout>
