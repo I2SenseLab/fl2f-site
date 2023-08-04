@@ -4,5 +4,5 @@ description: Dr. Elena Di Martino is the co-founder and CSO of ViTAA Medical Sol
 image: /images/people/dr.elena-di-martino.jpeg
 
 review: For me, the most important thing is to reflect on my role. I've been actively writing patents and getting my creativ juices flowing. I had a patent, of course, to start with, but now we wrote another four! That to me has been the most rewarding part of it. The most important thing for me was to understand what I wanted to do.
-featured: true
+order: 1
 ---
