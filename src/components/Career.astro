@@ -17,7 +17,7 @@ import "../styles/career.scss";
       <div class="left">
         <h2>{title}</h2>
         <!-- <h2 class="icon">&#94;</h2> -->
-        <div class="icon" id="icon">
+        <div class="icon" id={title}>
           <h2>></h2>
         </div>
       </div>
@@ -40,11 +40,17 @@ import "../styles/career.scss";
 </section>
 
 <script>
-  const icon = document.getElementById("icon") as HTMLDivElement;
-  const content = document.querySelector(".content") as HTMLDivElement;
+  const icons = document.querySelectorAll(
+    ".icon"
+  ) as NodeListOf<HTMLDivElement>;
+  const content = document.querySelectorAll(
+    ".content"
+  ) as NodeListOf<HTMLDivElement>;
 
-  icon.addEventListener("click", () => {
-    content.classList.toggle("hidden");
-    icon.classList.toggle("rotate");
+  icons.forEach((icon, index) => {
+    icon.addEventListener("click", () => {
+      content[index].classList.toggle("hidden");
+      icon.classList.toggle("rotate");
+    });
   });
 </script>
