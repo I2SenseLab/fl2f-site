@@ -1,0 +1,58 @@
+---
+import Showcase from "../components/Showcase.astro";
+import Layout from "../layouts/Layout.astro";
+
+//group photos
+import panAlberta from "/images/group-photos/Pan-Alberta-2023.png";
+import erin from "/images/group-photos/erin.png";
+import queens from "/images/group-photos/queens.png";
+import uofc from "/images/group-photos/uofc.png";
+import stem from "/images/group-photos/stem.png";
+import biu from "/images/group-photos/biu.png";
+import uofc2021 from "/images/group-photos/uofc2021.png";
+import uofcalumni from "/images/group-photos/uofcalumni.png";
+import uofcalumni2 from "/images/group-photos/uofcalumni2.png";
+---
+
+<Layout title="News">
+  <Showcase
+    image="/images/showcase.avif"
+    overlayLight={true}
+    verticalImage="/images/showcase-vertical.jpeg"
+    heading="News & Events"
+  />
+
+  <section class="certificates">
+    <div class="container">
+      <div class="awards">
+        <div class="image">
+          <img src={panAlberta} alt="Pan Alberta Group Photo" loading="lazy" />
+        </div>
+        <div class="image">
+          <img src={erin} alt="Erin Group Photo" loading="lazy" />
+        </div>
+        <div class="image">
+          <img src={queens} alt="Queens Group Photo" loading="lazy" />
+        </div>
+        <div class="image">
+          <img src={uofc} alt="U of C Group Photo" loading="lazy" />
+        </div>
+        <div class="image">
+          <img src={stem} alt="Stem Group Photo" loading="lazy" />
+        </div>
+        <div class="image">
+          <img src={biu} alt="BIU Group Photo" loading="lazy" />
+        </div>
+        <div class="image">
+          <img src={uofc2021} alt="U of C 2021 Group Photo" loading="lazy" />
+        </div>
+        <div class="image">
+          <img src={uofcalumni} alt="Alumni Group Photo" loading="lazy" />
+        </div>
+        <div class="image">
+          <img src={uofcalumni2} alt="Alumni Group Photo" loading="lazy" />
+        </div>
+      </div>
+    </div>
+  </section>
+</Layout>
