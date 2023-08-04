@@ -3,6 +3,10 @@
 .career {
   padding: 3rem 2rem;
 
+  &:nth-last-of-type(1) {
+    margin-bottom: 3rem;
+  }
+
   .container {
     .title {
       display: flex;
@@ -34,6 +38,7 @@
       }
       a {
         width: 15%;
+        min-width: 180px;
       }
     }
     .content {
@@ -60,6 +65,55 @@
 
         .btn-primary {
           max-width: 500px;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 900px) {
+  .career {
+    padding: 2rem;
+    .container {
+      .title {
+        .left {
+          h2 {
+            font-size: 1.8rem;
+          }
+        }
+        button {
+          font-size: 1.2rem;
+        }
+      }
+
+      .content {
+        h3 {
+          font-size: 1.5rem;
+        }
+        p {
+          font-size: 1rem;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 730px) {
+  .career {
+    padding: 1rem;
+  }
+}
+
+@media screen and (max-width: 628px) {
+  .career {
+    .container {
+      .title {
+        flex-direction: column;
+        .left {
+          width: 100%;
+        }
+        a {
+          display: none;
         }
       }
     }
