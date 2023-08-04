@@ -2,6 +2,17 @@
 import Layout from "../layouts/Layout.astro";
 import Showcase from "../components/Showcase.astro";
 import Testimonials from "../components/Testimonials.astro";
+
+//institutes
+import uofc from "/images/logos/uofc.png";
+import queens from "/images/logos/Queens.png";
+import EDLethbridge from "/images/logos/EDLethbridge.png";
+import uottawa from "/images/logos/uottawa.png";
+import erin from "/images/logos/erin.jpeg";
+import stem from "/images/logos/stem.jpeg";
+import biu from "/images/logos/bar-ilan-university.webp";
+
+import "../styles/recommendation.scss";
 ---
 
 <Layout title="Recommendations">
@@ -15,4 +26,58 @@ import Testimonials from "../components/Testimonials.astro";
   <div>
     <Testimonials isFeatured={false} recommendations={true} title="" />
   </div>
+
+  <section class="institutes">
+    <div class="container">
+      <h2>
+        FL2F has been successfully delivered around the globe at Institutes
+        including:
+      </h2>
+      <div class="awards">
+        <div class="image">
+          <a
+            href="https://www.ucalgary.ca/labs/integrated-intelligent-sensing/dr-orly-yadid-pecht"
+            target="_blank"
+            rel="noreferrer"
+            ><img src={uofc} alt="Logo for University of Calgary" /></a
+          >
+        </div>
+        <div class="image">
+          <a href="https://www.biu.ac.il/en" target="_blank" rel="noreferrer">
+            <img src={biu} alt="Logo for Ban Ilan University" />
+          </a>
+        </div>
+        <div class="image">
+          <a
+            href="https://www.astech.ca/archives/indexofpastwinners/yadid-pecht-dr-orly"
+            target="_blank"
+            rel="noreferrer"><img src={queens} alt="Logo for AS Tech" /></a
+          >
+        </div>
+        <div class="image">
+          <a
+            href="https://www.chooselethbridge.ca/"
+            target="_blank"
+            rel="noreferrer"
+            ><img src={EDLethbridge} alt="Logo for Choose Lethbridge" /></a
+          >
+        </div>
+        <div class="image">
+          <a href="https://www.uottawa.ca/en" target="_blank" rel="noreferrer"
+            ><img src={uottawa} alt="Logo for University of Ottawa" /></a
+          >
+        </div>
+        <div class="image">
+          <a href="https://www.edmontonrin.ca/" target="_blank" rel="noreferrer"
+            ><img src={erin} alt="Logo for ERIN" /></a
+          >
+        </div>
+        <div class="image">
+          <a href="https://westem.ca/" target="_blank" rel="noreferrer"
+            ><img src={stem} alt="Logo for Women in Stem" /></a
+          >
+        </div>
+      </div>
+    </div>
+  </section>
 </Layout>
