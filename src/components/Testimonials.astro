@@ -1,22 +1,33 @@
 ---
 import "../styles/testimonials.scss";
 
+// home page featured testimonials
 import * as featured1 from "../content/testimonials/1-DrDiMartino.md";
 import * as featured2 from "../content/testimonials/2-DrHeyne.md";
 import * as featured3 from "../content/testimonials/3-DrShefi.md";
-import * as featured6 from "../content/testimonials/6-DrFear.md";
 import * as featured5 from "../content/testimonials/5-DrCuriel.md";
 import * as featured4 from "../content/testimonials/4-DrHazay.md";
+import * as featured6 from "../content/testimonials/6-DrFear.md";
+
+// institute recommendations page
+import * as recommended1 from "../content/recommended/1-Banting.md";
+import * as recommended2 from "../content/recommended/2-Kilcrease.md";
+import * as recommended3 from "../content/recommended/3-Zehavi.md";
+import * as recommended4 from "../content/recommended/6-Skone.md";
+import * as recommended5 from "../content/recommended/5-Barlow.md";
+
 import Card from "./Card.astro";
 
 export interface Props {
   isFeatured: boolean;
   title?: string;
+  recommendations?: boolean;
 }
 
 const {
   title = "We thrive on cultivating the skills women need to start their own businesses.",
   isFeatured,
+  recommendations,
 } = Astro.props as Props;
 
 //get Markdown files for featured, current, and completed projects
@@ -29,9 +40,19 @@ const featuredArr = [
   featured6,
 ];
 
-let mapArr: any[] = featuredArr;
+const recommendedArr = [
+  recommended1,
+  recommended2,
+  recommended3,
+  recommended4,
+  recommended5,
+];
 
-if (!isFeatured) {
+let mapArr: any[] = featuredArr;
+if (recommendations) {
+  mapArr = recommendedArr;
+  return;
+} else if (!isFeatured) {
   const testimonialsArr = await Astro.glob("../content/testimonials/*.md");
   mapArr = testimonialsArr.sort((a, b) => {
     return a.frontmatter.order - b.frontmatter.order;
