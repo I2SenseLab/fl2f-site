@@ -1,5 +1,4 @@
 ---
-import "../styles/recommendations.scss";
 import Layout from "../layouts/Layout.astro";
 import Showcase from "../components/Showcase.astro";
 import Testimonials from "../components/Testimonials.astro";
@@ -13,5 +12,7 @@ import Testimonials from "../components/Testimonials.astro";
     heading="Recommendations"
   />
 
-  <Testimonials isFeatured={false} recommendations={true} />
+  <div>
+    <Testimonials isFeatured={false} recommendations={true} title="" />
+  </div>
 </Layout>
