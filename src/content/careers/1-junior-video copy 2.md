@@ -1,6 +1,7 @@
 ---
 title: Junior Video Editor
 link: https://docs.google.com/forms/d/e/1FAIpQLSc6f9jdPMQQr9lGGp69ECAZK4LE_YrqsGEB4BPPefdMWDsXsA/viewform
+career: true
 ---
 
 ### Overview
