@@ -2,72 +2,73 @@
 
 .what-to-expect {
   .container {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 2rem;
-    a {
-      font-weight: 600;
-      color: $secondary-color;
-    }
-    h3 {
-      font-size: 1.5rem;
-      margin: 1.3rem 0 1rem;
-    }
-
-    .text {
-      p {
-        font-size: 1rem;
-      }
-      li {
+    .first {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 2rem;
+      a {
+        font-weight: 600;
         color: $secondary-color;
-        list-style: disc;
-        margin-left: 1.5rem;
-        span {
-          color: #000;
-        }
+      }
+      h3 {
+        font-size: 1.5rem;
+        margin: 1.3rem 0 1rem;
       }
 
-      ol {
+      .text {
+        p {
+          font-size: 1rem;
+        }
         li {
-          list-style: decimal;
-          font-weight: 500;
-          font-size: 1.2rem;
-
+          color: $secondary-color;
+          list-style: disc;
+          margin-left: 1.5rem;
           span {
-            font-weight: 400;
-            font-size: 1rem;
+            color: #000;
+          }
+        }
+
+        ol {
+          li {
+            list-style: decimal;
+            font-weight: 500;
+            font-size: 1.2rem;
+
+            span {
+              font-weight: 400;
+              font-size: 1rem;
+            }
           }
         }
       }
+
+      .schedule {
+        text-align: center;
+
+        .download {
+          a {
+            font-size: 0.9rem;
+          }
+        }
+        .photos {
+          img {
+            max-width: 550px;
+          }
+        }
+        .sub-schedule {
+          p {
+            text-align: left;
+            max-width: 550px;
+            margin: 10px auto;
+            font-size: 1rem;
+          }
+        }
+
+        .instructors {
+          margin-top: 3rem;
+        }
+      }
     }
-
-    .schedule {
-      text-align: center;
-
-      .download {
-        a {
-          font-size: 0.9rem;
-        }
-      }
-      .photos {
-        img {
-          max-width: 550px;
-        }
-      }
-      .sub-schedule {
-        p {
-          text-align: left;
-          max-width: 550px;
-          margin: 10px auto;
-          font-size: 1rem;
-        }
-      }
-
-      .instructors {
-        margin-top: 3rem;
-      }
-    }
-
     .results {
       grid-column: 1 / span 2;
       margin: 2rem 0 5rem;
@@ -92,6 +93,73 @@
           &:nth-child(2) {
             h2 {
               color: $second-light;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 1000px) {
+  .what-to-expect {
+    .container {
+      .first {
+        display: flex;
+        flex-direction: column;
+      }
+      .results {
+        .flex {
+          flex-direction: column;
+          .num {
+            max-width: 60%;
+            margin: 1rem 0;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .what-to-expect {
+    .container {
+      .first {
+        .schedule {
+          .photos {
+            img {
+              max-width: 100%;
+            }
+          }
+        }
+      }
+
+      .results {
+        margin-top: 5rem;
+        .flex {
+          .num {
+            max-width: 100%;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 440px) {
+  .what-to-expect {
+    .container {
+      .first {
+        .schedule {
+          .download {
+            display: flex;
+            flex-direction: column;
+            margin: 0;
+            a {
+              margin: 1rem;
+            }
+            span {
+              display: none;
             }
           }
         }

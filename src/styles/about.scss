@@ -12,3 +12,13 @@
     text-align: left;
   }
 }
+
+@media screen and (max-width: 600px) {
+  .sub-heading {
+    padding: 5rem 0;
+
+    button {
+      width: 100%;
+    }
+  }
+}
