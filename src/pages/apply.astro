@@ -1,13 +1,12 @@
 ---
-import Showcase from "../components/Showcase.astro";
 import Layout from "../layouts/Layout.astro";
+import "../styles/apply.scss";
 ---
 
 <Layout title="Apply">
-  <Showcase
-    image="/images/showcase.avif"
-    overlay={true}
-    verticalImage="/images/showcase-vertical.jpeg"
-    heading="Contact Us"
-  />
+  <iframe
+    class="apply-form"
+    src="https://docs.google.com/forms/d/e/1FAIpQLSeueJpHncM5UXUAXe1IWlaI01lauRUro1Ku_M7mFBbBIg884g/viewform"
+    frameborder="0"
+    scrolling="no"></iframe>
 </Layout>

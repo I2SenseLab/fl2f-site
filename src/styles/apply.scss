@@ -1,0 +1,32 @@
+@import "variables.scss";
+
+.apply-form {
+  width: 100%;
+  margin-top: 0;
+  height: 100%;
+  min-height: 5200px;
+}
+
+@media screen and (max-width: 680px) {
+  .apply-form {
+    min-height: 5500px;
+  }
+}
+
+@media screen and (max-width: 520px) {
+  .apply-form {
+    min-height: 5700px;
+  }
+}
+
+@media screen and (max-width: 470px) {
+  .apply-form {
+    min-height: 6200px;
+  }
+}
+
+@media screen and (max-width: 370px) {
+  .apply-form {
+    min-height: 7000px;
+  }
+}
