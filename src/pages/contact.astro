@@ -16,15 +16,45 @@ import "../styles/contact.scss";
     <div class="container">
       <div class="form">
         <!-- <div class="image"><img src={image} alt="" /></div> -->
-        <form name="contact" method="POST" data-netlify="true">
+        <form id="form" name="contact" method="POST" data-netlify="true">
           <h2>Get In Touch</h2>
-          <input type="text" name="name" placeholder="FULL NAME" />
-          <input type="email" name="email" placeholder="EMAIL" />
-          <textarea name="message" placeholder="MESSAGE"></textarea>
+          <input type="text" name="name" placeholder="FULL NAME*" id="name" />
+          <input type="email" name="email" placeholder="EMAIL*" id="email" />
+          <textarea name="message" placeholder="MESSAGE*" id="message"
+          ></textarea>
 
-          <button class="btn btn-secondary" type="submit">SUBMIT</button>
+          <button class="btn btn-secondary" type="submit" id="formBtn"
+            >SUBMIT</button
+          >
         </form>
       </div>
     </div>
   </section>
 </Layout>
+
+<script>
+  const form = document.getElementById("form") as HTMLFormElement;
+  const emailInput = document.getElementById("email") as HTMLFormElement;
+  const nameInput = document.getElementById("name") as HTMLFormElement;
+  const messageInput = document.getElementById("message") as HTMLFormElement;
+  const button = document.getElementById("formBtn") as HTMLFormElement;
+
+  button.addEventListener("click", (e) => {
+    e.preventDefault();
+
+    // Check if email, name, and message inputs have some content
+    if (
+      !emailInput.value ||
+      emailInput.value.trim() === "" ||
+      !nameInput.value ||
+      nameInput.value.trim() === "" ||
+      !messageInput.value ||
+      messageInput.value.trim() === ""
+    ) {
+      alert("Please fill out all fields");
+    } else {
+      // Submit the form
+      form.submit();
+    }
+  });
+</script>
