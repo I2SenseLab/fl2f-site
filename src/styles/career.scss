@@ -23,7 +23,10 @@
           font-size: 1.8rem;
           margin-bottom: 0;
           max-width: 860px;
-          min-height: 64px;
+          &:hover {
+            cursor: pointer;
+            opacity: 0.8;
+          }
         }
         .icon {
           @include flex-center;
@@ -51,6 +54,10 @@
     }
     .content {
       margin-top: 3rem;
+
+      ol {
+        margin-left: 2rem;
+      }
 
       &.hidden {
         display: none;
@@ -133,6 +140,22 @@
         }
         a {
           display: none;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .career {
+    .container {
+      padding: 0;
+      .title {
+        .left {
+          h2 {
+            text-align: left;
+            font-size: 1.5rem;
+          }
         }
       }
     }

@@ -17,8 +17,9 @@ import "../styles/career.scss";
       <div class="left">
         <h2 class="title">{title}</h2>
         <!-- <h2 class="icon">&#94;</h2> -->
-        <h2 class="icon">></h2>
-        <!-- <div class="icon" id={title}></div> -->
+        <div class="icon" id={title}>
+          <h2>></h2>
+        </div>
       </div>
       {
         link && (
@@ -76,6 +77,7 @@ import "../styles/career.scss";
     title.addEventListener("click", () => {
       content[index].classList.toggle("hidden");
       // title.classList.toggle("rotate");
+      title.children[1].classList.toggle("rotate");
     });
   });
 </script>
