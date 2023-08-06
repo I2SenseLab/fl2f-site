@@ -34,16 +34,7 @@ const {
   {overlay && <div class="overlay" />}
   {overlayLight && <div class="overlay-light" />}
   <div class="showcase-image">
-    <img
-      srcset=`
-       ${verticalImage}  400w,
-       ${image}  800w`
-      ;
-      src={image}
-      alt="showcase Image"
-      loading="eager"
-      role="presentation"
-    />
+    <img src={image} alt="showcase Image" loading="eager" role="presentation" />
   </div>
 
   <div class="container">

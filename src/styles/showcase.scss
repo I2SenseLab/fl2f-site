@@ -3,7 +3,7 @@
 .showcase {
   position: relative;
   z-index: 2;
-  height: auto;
+  // height: auto;
   max-height: 50vh;
   width: 100%;
   overflow: hidden;
@@ -38,7 +38,6 @@
 
     .showcase-text {
       max-width: 1400px;
-      margin-bottom: 5rem;
 
       &.not-home {
         text-transform: uppercase;
@@ -88,17 +87,15 @@
 
 @media screen and (max-width: 750px) {
   .showcase {
-    height: 80vh;
-    .showcase-image {
-      img {
-        max-width: 150%;
-      }
-    }
     .container {
       justify-content: flex-end;
       .showcase-text {
         padding: 1rem;
         margin-top: 0;
+
+        &.not-home {
+          margin-bottom: 2rem;
+        }
         h1 {
           margin-bottom: 0;
           font-size: 2rem;
@@ -114,6 +111,12 @@
 
 @media screen and (max-width: 388px) {
   .showcase {
+    // height: 80vh;
+    .showcase-image {
+      img {
+        max-width: 150%;
+      }
+    }
     .container {
       .showcase-text {
         button {
