@@ -7,7 +7,11 @@ const faqsArr = await Astro.glob("../content/faqs/*.md");
 ---
 
 <Layout title="FAQ">
-  <Showcase image="/images/hero/faqs.jpeg" overlayLight={true} heading="FAQ" />
+  <Showcase
+    image="/images/hero/tinywebp/faqs.webp"
+    overlayLight={true}
+    heading="FAQ"
+  />
 
   {
     faqsArr
