@@ -7,7 +7,10 @@ import "../styles/about.scss";
 const careersArr = await Astro.glob("../content/careers/*.md");
 ---
 
-<Layout title="Careers">
+<Layout
+  title="Careers"
+  description="Careers - Join our team and help make in a difference in promoting women entrepeneurship"
+>
   <Showcase
     image="/images/hero/tinywebp/careers.webp"
     overlayLight={true}

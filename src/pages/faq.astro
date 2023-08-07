@@ -6,7 +6,10 @@ import Layout from "../layouts/Layout.astro";
 const faqsArr = await Astro.glob("../content/faqs/*.md");
 ---
 
-<Layout title="FAQ">
+<Layout
+  title="FAQ"
+  description="FAQs - Read some of our most asked questions. "
+>
   <Showcase
     image="/images/hero/tinywebp/faqs.webp"
     overlayLight={true}
