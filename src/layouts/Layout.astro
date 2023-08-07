@@ -9,7 +9,6 @@ export interface Props {
   title: string;
   description?: string;
 }
-const canonicalURL = new URL(Astro.url.pathname, Astro.site);
 
 const { title = "FL2F", description } = Astro.props;
 ---
@@ -36,8 +35,6 @@ const { title = "FL2F", description } = Astro.props;
     <meta property="twitter:description" content={description} />
     <meta property="twitter:image" content={new URL(image, Astro.url)} />
 
-    <!-- Canonical URL -->
-    <link rel="canonical" href={canonicalURL} />
     <link rel="icon" href="/favicon.ico" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
