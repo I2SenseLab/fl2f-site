@@ -1,5 +1,12 @@
 # Main static Website for FL2F
 
+### Things to update
+
+- WhatToExpect component:
+
+  - update the date of the next cohort,
+  - update the calendar urls
+
 - Testimonials page is located at [/testimonials](https://www.fl2f.ca/testimonials)
 
 - to add/ remove testimonials, go to content, the testimonials folder, and create/delete the markdown file
