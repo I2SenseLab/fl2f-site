@@ -5,13 +5,14 @@ export default {
   fields: [
     // text on the left
     {name: 'title', title: 'Title', type: 'string'},
-    {name: 'upcomingCourseStart', title: 'Upcoming Course Start', type: 'string'},
-    {name: 'upcomingCourseEnd', title: 'Upcoming Course End', type: 'string'},
-    {name: 'earlyBirdCost', title: 'Early Bird Cost', type: 'string'},
-    {name: 'earlybird', title: 'Early Bird Date End', type: 'date'},
-    {name: 'cost', title: 'Regular Cost', type: 'string'},
-    {name: 'deposit', title: 'Deposit Fee', type: 'string'},
+    {name: 'upcomingCourseStart', title: 'Upcoming Course Start', type: 'date'},
+    {name: 'upcomingCourseEnd', title: 'Upcoming Course End', type: 'date'},
+    {name: 'earlyBirdCost', title: 'Early Bird Cost', type: 'number'},
+    {name: 'earlyBirdEnd', title: 'Early Bird Date End', type: 'date'},
+    {name: 'cost', title: 'Regular Cost', type: 'number'},
+    {name: 'deposit', title: 'Deposit Fee', type: 'number'},
     {name: 'fullPaymentDueDate', title: 'Full Payment Due Date', type: 'date'},
+    {name: 'applyDeadline', title: 'Deadline To Apply', type: 'date'},
     {name: 'cancelBy', title: 'Cancel By Date', type: 'date'},
     // image and links on the right
     {name: 'pstLink', title: 'PST Schedule Link', type: 'url'},
