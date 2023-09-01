@@ -2,6 +2,10 @@
 import "../styles/what-to-expect.scss";
 import schedule1 from "/images/schedule1.webp";
 import schedule2 from "/images/schedule2.webp";
+
+import { getLearnMoreContent } from "../lib/api";
+
+const content = await getLearnMoreContent();
 ---
 
 <section class="what-to-expect">
@@ -9,6 +13,7 @@ import schedule2 from "/images/schedule2.webp";
     <div class="first">
       <!-- Left Side -->
       <div class="text">
+        <p>{JSON.stringify(content)}</p>
         <div class="expect">
           <h3>What to Expect:</h3>
           <p>
