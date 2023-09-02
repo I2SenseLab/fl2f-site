@@ -54,12 +54,14 @@ export interface AlumniEvent extends SanityBody {
   _type: "alumniEvent";
   title: string;
   alumniImage: Image;
+  date: date;
 }
 
 export interface CertificateEvent extends SanityBody {
   _type: "certificateEvent";
   title: string;
   certificateImage: Image;
+  date: date;
 }
 
 export interface NewsEvent extends SanityBody {

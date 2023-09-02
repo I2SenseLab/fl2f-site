@@ -12,5 +12,6 @@ export default {
         hotspot: true,
       },
     },
+    {name: 'date', title: 'Date', type: 'date'},
   ],
 }
