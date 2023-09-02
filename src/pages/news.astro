@@ -1,17 +1,6 @@
 ---
 import Showcase from "../components/Showcase.astro";
 import Layout from "../layouts/Layout.astro";
-
-//group photos
-import panAlberta from "/images/group-photos/tinywebp/Pan-Alberta-2023.webp";
-import erin from "/images/group-photos/tinywebp/erin.webp";
-import queens from "/images/group-photos/tinywebp/queens.webp";
-import uofc from "/images/group-photos/tinywebp/uofc.webp";
-import stem from "/images/group-photos/tinywebp/stem.webp";
-import biu from "/images/group-photos/tinywebp/biu.webp";
-import uofc2021 from "/images/group-photos/tinywebp/uofc2021.webp";
-import uofcalumni from "/images/group-photos/tinywebp/uofcalumni.webp";
-import uofcalumni2 from "/images/group-photos/tinywebp/uofcalumni2.webp";
 import Card from "../components/Card.astro";
 import "../styles/news.scss";
 
@@ -65,31 +54,6 @@ const sortedAlum = [...alumniContent].sort((a, b) => {
               );
             })
           }
-          <!-- <div class="image">
-            <img
-              src={panAlberta}
-              alt="Pan Alberta Group Photo"
-              loading="lazy"
-            />
-          </div>
-          <div class="image">
-            <img src={erin} alt="Erin Group Photo" loading="lazy" />
-          </div>
-          <div class="image">
-            <img src={queens} alt="Queens Group Photo" loading="lazy" />
-          </div>
-          <div class="image">
-            <img src={uofc} alt="U of C Group Photo" loading="lazy" />
-          </div>
-          <div class="image">
-            <img src={stem} alt="Stem Group Photo" loading="lazy" />
-          </div>
-          <div class="image">
-            <img src={biu} alt="BIU Group Photo" loading="lazy" />
-          </div>
-          <div class="image">
-            <img src={uofc2021} alt="U of C 2021 Group Photo" loading="lazy" />
-          </div> -->
         </div>
       </div>
     </section>
@@ -108,12 +72,6 @@ const sortedAlum = [...alumniContent].sort((a, b) => {
               </div>
             ))
           }
-          <!-- <div class="image">
-            <img src={uofcalumni} alt="Alumni Group Photo" loading="lazy" />
-          </div>
-          <div class="image">
-            <img src={uofcalumni2} alt="Alumni Group Photo" loading="lazy" />
-          </div> -->
         </div>
       </div>
     </section>
