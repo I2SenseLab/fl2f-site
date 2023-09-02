@@ -41,18 +41,15 @@ const sortedAlum = [...alumniContent].sort((a, b) => {
         <h2>Certificate Events</h2>
         <div class="awards">
           {
-            sortedCerts.map((event) => {
-              console.log(event.date);
-              return (
-                <div class="image">
-                  <img
-                    src={urlFor(event.certificateImage).url()}
-                    alt={event.title}
-                    loading="lazy"
-                  />
-                </div>
-              );
-            })
+            sortedCerts.map((event) => (
+              <div class="image">
+                <img
+                  src={urlFor(event.certificateImage).url()}
+                  alt={event.title}
+                  loading="lazy"
+                />
+              </div>
+            ))
           }
         </div>
       </div>
