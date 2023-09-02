@@ -8,7 +8,5 @@ export async function getLearnMoreContent() {
   `;
   const res = await client.fetch(query);
   const learnMore: LearnMore = res[0];
-  console.log("learnMore: ", learnMore.exampleSchedulePart1);
-
   return learnMore;
 }
