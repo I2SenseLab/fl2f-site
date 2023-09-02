@@ -1,11 +1,17 @@
 ---
 import "../styles/what-to-expect.scss";
-import schedule1 from "/images/schedule1.webp";
-import schedule2 from "/images/schedule2.webp";
+// import schedule1 from "/images/schedule1.webp";
+// import schedule2 from "/images/schedule2.webp";
 
 import { getLearnMoreContent } from "../lib/fetchLearnMore";
+import { urlFor } from "../lib/fetchImage";
 
 const content = await getLearnMoreContent();
+const schedule1 = content.exampleSchedulePart1;
+const schedule2 = content.exampleSchedulePart2;
+
+console.log("schedule1", schedule1.asset._ref);
+console.log("schedule2", schedule2);
 ---
 
 <section class="what-to-expect">
@@ -217,8 +223,16 @@ const content = await getLearnMoreContent();
           </p>
           <p>Times Displayed In MT</p>
           <div class="photos">
-            <img src={schedule1} alt="example schedule part 1" />
-            <img src={schedule2} alt="example schedule part 2" />
+            <img
+              src={urlFor(content.exampleSchedulePart1).url()}
+              alt="example schedule part 1"
+              loading="lazy"
+            />
+            <img
+              src={urlFor(content.exampleSchedulePart2).url()}
+              alt="example schedule part 2"
+              loading="lazy"
+            />
           </div>
           <div class="sub-schedule">
             <p>

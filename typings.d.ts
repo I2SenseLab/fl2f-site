@@ -6,10 +6,12 @@ interface SanityBody {
 }
 
 interface Image {
+  _id: string;
   _type: "image";
+  name: string;
   asset: {
     _ref: string;
-    _type: "reference";
+    type: "reference";
   };
 }
 
