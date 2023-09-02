@@ -1,8 +1,5 @@
 ---
 import "../styles/what-to-expect.scss";
-// import schedule1 from "/images/schedule1.webp";
-// import schedule2 from "/images/schedule2.webp";
-
 import { getLearnMoreContent } from "../lib/fetchLearnMore";
 import { urlFor } from "../lib/fetchImage";
 
@@ -193,29 +190,21 @@ console.log("EXAMPLE IMAGE", content.exampleSchedulePart1);
         <div class="schedule">
           <h3>Schedule</h3>
           <p class="download">
-            <a
-              href="https://drive.google.com/file/d/12CtCCn2e0cEmPMg7LzUxMFduZig8U21Y/view"
-              target="_blank"
-              rel="noreferrer">Download Schedule (PST)</a
+            <a href={content.pstLink} target="_blank" rel="noreferrer"
+              >Download Schedule (PST)</a
             >
             <span>|</span>
-            <a
-              href="https://drive.google.com/file/d/1lJsHaTL1Fxbxs5rTX4jRfrwOpMZw74ZU/view"
-              target="_blank"
-              rel="noreferrer">Download Schedule (MST)</a
+            <a href={content.mstLink} target="_blank" rel="noreferrer"
+              >Download Schedule (MST)</a
             >
           </p>
           <p class="download">
-            <a
-              href="https://drive.google.com/file/d/1gXpcmq93JiGvFMYwDM61RfXYL9enJtLr/view"
-              target="_blank"
-              rel="noreferrer">Download Schedule (CST)</a
+            <a href={content.cstLink} target="_blank" rel="noreferrer"
+              >Download Schedule (CST)</a
             >
             <span>|</span>
-            <a
-              href="https://drive.google.com/file/d/1FDI9XtP1cWyzcIrUVW9XATu2qWxRaQ8q/view"
-              target="_blank"
-              rel="noreferrer">Download Schedule (EST)</a
+            <a href={content.estLink} target="_blank" rel="noreferrer"
+              >Download Schedule (EST)</a
             >
           </p>
           <p>Times Displayed In MT</p>
