@@ -38,11 +38,6 @@ export interface LearnMore extends SanityBody {
   network: string;
 }
 
-// Define Image and ImageWithHotspot types based on your data structure
-interface Image {
-  // Define image properties here
-}
-
 interface ImageWithHotspot extends Image {
   options: {
     hotspot: boolean;
@@ -55,17 +50,19 @@ export interface Technology extends SanityBody {
   title: string;
 }
 
-export interface alumniEvent extends SanityBody {
+export interface AlumniEvent extends SanityBody {
   _type: "alumniEvent";
-  image: Image;
+  title: string;
+  alumniImage: Image;
 }
 
-export interface certificateEvent extends SanityBody {
+export interface CertificateEvent extends SanityBody {
   _type: "certificateEvent";
-  image: Image;
+  title: string;
+  certificateImage: Image;
 }
 
-export interface newsEvent extends SanityBody {
+export interface NewsEvent extends SanityBody {
   _type: "newsEvent";
   date: date;
   title: string;
@@ -73,10 +70,10 @@ export interface newsEvent extends SanityBody {
   link: string;
 }
 
-export interface NewsEventPage extends SanityBody {
-  _type: "newsEventPage";
+export interface NewsEventsPage extends SanityBody {
+  _type: "newsEventsPage";
 
-  certificateEvents: certificateEvent[];
-  alumniEvents: alumniEvent[];
+  certificateEvents: CertificateEvent[];
+  alumniEvents: AlumniEvent[];
   newsEvents: newsEvent[];
 }

@@ -1,8 +1,9 @@
 export default {
   name: 'certificateEvent',
-  title: 'Certificate Event',
+  title: 'Certificate Events',
   type: 'document',
   fields: [
+    {name: 'title', title: 'Title', type: 'string'},
     {
       name: 'certificateImage',
       title: 'Certificate Image',

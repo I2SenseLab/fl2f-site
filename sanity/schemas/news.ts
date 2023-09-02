@@ -1,6 +1,6 @@
 export default {
   name: 'newsEvent',
-  title: 'News Event',
+  title: 'News Events',
   type: 'document',
   fields: [
     {name: 'date', title: 'Date', type: 'date'},

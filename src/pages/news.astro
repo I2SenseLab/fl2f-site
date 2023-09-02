@@ -13,8 +13,16 @@ import uofc2021 from "/images/group-photos/tinywebp/uofc2021.webp";
 import uofcalumni from "/images/group-photos/tinywebp/uofcalumni.webp";
 import uofcalumni2 from "/images/group-photos/tinywebp/uofcalumni2.webp";
 import Card from "../components/Card.astro";
-
 import "../styles/news.scss";
+
+import { getNewsEvents } from "../lib/fetchNewsEvents";
+import { getCertificateEvents } from "../lib/fetchCertificateEvents";
+import { getAlumniEvents } from "../lib/fetchAlumniEvents";
+import { urlFor } from "../lib/fetchImage";
+
+const certificateContent = await getCertificateEvents();
+const alumniContent = await getAlumniEvents();
+const newsContent = await getNewsEvents();
 ---
 
 <Layout
@@ -32,7 +40,18 @@ import "../styles/news.scss";
       <div class="container">
         <h2>Certificate Events</h2>
         <div class="awards">
-          <div class="image">
+          {
+            certificateContent.map((event) => (
+              <div class="image">
+                <img
+                  src={urlFor(event.certificateImage).url()}
+                  alt={event.title}
+                  loading="lazy"
+                />
+              </div>
+            ))
+          }
+          <!-- <div class="image">
             <img
               src={panAlberta}
               alt="Pan Alberta Group Photo"
@@ -56,7 +75,7 @@ import "../styles/news.scss";
           </div>
           <div class="image">
             <img src={uofc2021} alt="U of C 2021 Group Photo" loading="lazy" />
-          </div>
+          </div> -->
         </div>
       </div>
     </section>
@@ -64,30 +83,50 @@ import "../styles/news.scss";
       <div class="container">
         <h2>Alumni Events</h2>
         <div class="awards">
-          <div class="image">
+          {
+            alumniContent.map((event) => (
+              <div class="image">
+                <img
+                  src={urlFor(event.alumniImage).url()}
+                  alt={event.title}
+                  loading="lazy"
+                />
+              </div>
+            ))
+          }
+          <!-- <div class="image">
             <img src={uofcalumni} alt="Alumni Group Photo" loading="lazy" />
           </div>
           <div class="image">
             <img src={uofcalumni2} alt="Alumni Group Photo" loading="lazy" />
-          </div>
+          </div> -->
         </div>
       </div>
     </section>
 
     <section class="featured">
       <div class="container">
-        <p>October 11, 2022</p>
-        <h2>
-          FL2F was featured on <a
-            href="https://www.ucalgary.ca/news/workshops-designed-one-purpose-guiding-women-entrepreneurial-landscape"
-            >UCalgary News</a
-          >
-        </h2>
-        <p class="subheading">
-          We would like to thank the UToday team for interviewing our founder,
-          Dr. Orly Yadid-Pecht, and featuring the From Lab 2 Fulfillment (FL2F)
-          program on UCalgary News.
-        </p>
+        {
+          newsContent.map((event) => (
+            <>
+              <p>
+                {new Date(event.date).toLocaleDateString("en-US", {
+                  year: "numeric",
+                  month: "long",
+                  day: "numeric",
+                })}
+              </p>
+              {event.link ? (
+                <a href={event.link}>
+                  <h2>{event.title}</h2>
+                </a>
+              ) : (
+                <h2>{event.title}</h2>
+              )}
+              <p class="subheading">{event.description}</p>
+            </>
+          ))
+        }
       </div>
     </section>
 

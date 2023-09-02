@@ -7,11 +7,8 @@ import { getLearnMoreContent } from "../lib/fetchLearnMore";
 import { urlFor } from "../lib/fetchImage";
 
 const content = await getLearnMoreContent();
-const schedule1 = content.exampleSchedulePart1;
-const schedule2 = content.exampleSchedulePart2;
 
-console.log("schedule1", schedule1.asset._ref);
-console.log("schedule2", schedule2);
+console.log("EXAMPLE IMAGE", content.exampleSchedulePart1);
 ---
 
 <section class="what-to-expect">
