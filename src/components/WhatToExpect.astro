@@ -1,7 +1,9 @@
 ---
 import "../styles/what-to-expect.scss";
-import schedule1 from "/images/schedule1.webp";
-import schedule2 from "/images/schedule2.webp";
+import { getLearnMoreContent } from "../lib/fetchLearnMore";
+import { urlFor } from "../lib/fetchImage";
+
+const content = await getLearnMoreContent();
 ---
 
 <section class="what-to-expect">
@@ -12,10 +14,29 @@ import schedule2 from "/images/schedule2.webp";
         <div class="expect">
           <h3>What to Expect:</h3>
           <p>
-            Our upcoming FL2F Workshop is all online and begins on <span
-              >Monday, October 30, 2023</span
-            > and ends on <span>Thursday, November 16, 2023</span>. A detailed
-            schedule is on the right
+            Our upcoming FL2F Workshop is all online and begins on <strong
+              >{
+                new Date(content.upcomingCourseStart).toLocaleDateString(
+                  "en-US",
+                  {
+                    year: "numeric",
+                    month: "long",
+                    day: "numeric",
+                  }
+                )
+              }</strong
+            > and ends on <strong
+              >{
+                new Date(content.upcomingCourseEnd).toLocaleDateString(
+                  "en-US",
+                  {
+                    year: "numeric",
+                    month: "long",
+                    day: "numeric",
+                  }
+                )
+              }</strong
+            >. A detailed schedule is on the right
           </p>
         </div>
         <div class="eligibility">
@@ -95,112 +116,158 @@ import schedule2 from "/images/schedule2.webp";
           </p>
           <p class="early-bird">
             <em>
-              Early-bird registration - $2095 CAD (to qualify for early-bird,
-              full payment is to be received by Aug 2)</em
+              <strong
+                >Early-bird registration - ${content.earlyBirdCost} CAD</strong
+              > (to qualify for early-bird, full payment is to be received by <strong
+                >{
+                  new Date(content.earlyBirdEnd).toLocaleDateString("en-US", {
+                    year: "numeric",
+                    month: "long",
+                    day: "numeric",
+                  })
+                }</strong
+              >
+            </em>
+            <p class="regular">
+              <strong>Regular registration - ${content.cost} CAD</strong>
+            </p>
+            <p>
+              You will be required to pay a <strong
+                >${content.deposit} CAD deposit fee</strong
+              > to hold your spot.
+            </p>
+            <p>
+              The remaining balance is to be paid by <strong
+                >{
+                  new Date(content.fullPaymentDueDate).toLocaleDateString(
+                    "en-US",
+                    {
+                      year: "numeric",
+                      month: "long",
+                      day: "numeric",
+                    }
+                  )
+                }.</strong
+              >
+            </p>
+            <p>
+              <strong
+                >Deadline to apply is {
+                  new Date(content.applyDeadline).toLocaleDateString("en-US", {
+                    year: "numeric",
+                    month: "long",
+                    day: "numeric",
+                  })
+                }.</strong
+              >
+            </p>
+          </p>
+          <div class="cancelation">
+            <h3>Cancelation Policy:</h3>
+            <p>
+              You can cancel and receive a full refund (minus $100 CAD) until
+              {
+                new Date(content.cancelBy).toLocaleDateString("en-US", {
+                  year: "numeric",
+                  month: "long",
+                  day: "numeric",
+                })
+              }. After <strong
+                >{
+                  new Date(content.cancelBy).toLocaleDateString("en-US", {
+                    year: "numeric",
+                    month: "long",
+                    day: "numeric",
+                  })
+                }</strong
+              >, no refunds can be granted.
+            </p>
+          </div>
+        </div>
+        <!-- Right Side -->
+        <div class="schedule">
+          <h3>Schedule</h3>
+          <p class="download">
+            <a href={content.pstLink} target="_blank" rel="noreferrer"
+              >Download Schedule (PST)</a
+            >
+            <span>|</span>
+            <a href={content.mstLink} target="_blank" rel="noreferrer"
+              >Download Schedule (MST)</a
             >
           </p>
-          <p class="regular">Regular registration - $2495 CAD</p>
-          <p>
-            You will be required to pay a <strong>$595 CAD deposit fee</strong> to
-            hold your spot.
+          <p class="download">
+            <a href={content.cstLink} target="_blank" rel="noreferrer"
+              >Download Schedule (CST)</a
+            >
+            <span>|</span>
+            <a href={content.estLink} target="_blank" rel="noreferrer"
+              >Download Schedule (EST)</a
+            >
           </p>
-          <p>
-            The remaining balance is to be paid by <strong>August 24</strong>.
-          </p>
-          <p><strong>Deadline to apply is August 24, 2023.</strong></p>
-        </div>
-        <div class="cancelation">
-          <h3>Cancelation Policy:</h3>
-          <p>
-            You can cancel and receive a full refund (minus $100 CAD) until
-            September 15. After <strong>September 15</strong>, no refunds can be
-            granted.
-          </p>
+          <p>Times Displayed In MT</p>
+          <div class="photos">
+            <img
+              src={urlFor(content.exampleSchedulePart1).url()}
+              alt="example schedule part 1"
+              loading="lazy"
+            />
+            <img
+              src={urlFor(content.exampleSchedulePart2).url()}
+              alt="example schedule part 2"
+              loading="lazy"
+            />
+          </div>
+          <div class="sub-schedule">
+            <p>
+              <strong
+                >*Following the group meeting, participants are required to
+                watch online videos and complete assigned homework before the
+                next group meeting.</strong
+              >
+            </p>
+            <p>
+              <strong
+                >**Each participant will be assigned a 25-minute time slot on
+                either of the two coaching dates.</strong
+              >
+            </p>
+          </div>
+          <div class="instructors">
+            <h3>Instructor:</h3>
+            <p>
+              Read about Dr. Orly Yadid-Pecht on the <a href="/founder"
+                >Our Founders</a
+              > page
+            </p>
+          </div>
         </div>
       </div>
-      <!-- Right Side -->
-      <div class="schedule">
-        <h3>Schedule</h3>
-        <p class="download">
-          <a
-            href="https://drive.google.com/file/d/12CtCCn2e0cEmPMg7LzUxMFduZig8U21Y/view"
-            target="_blank"
-            rel="noreferrer">Download Schedule (PST)</a
-          >
-          <span>|</span>
-          <a
-            href="https://drive.google.com/file/d/1lJsHaTL1Fxbxs5rTX4jRfrwOpMZw74ZU/view"
-            target="_blank"
-            rel="noreferrer">Download Schedule (MST)</a
-          >
-        </p>
-        <p class="download">
-          <a
-            href="https://drive.google.com/file/d/1gXpcmq93JiGvFMYwDM61RfXYL9enJtLr/view"
-            target="_blank"
-            rel="noreferrer">Download Schedule (CST)</a
-          >
-          <span>|</span>
-          <a
-            href="https://drive.google.com/file/d/1FDI9XtP1cWyzcIrUVW9XATu2qWxRaQ8q/view"
-            target="_blank"
-            rel="noreferrer">Download Schedule (EST)</a
-          >
-        </p>
-        <p>Times Displayed In MT</p>
-        <div class="photos">
-          <img src={schedule1} alt="example schedule part 1" />
-          <img src={schedule2} alt="example schedule part 2" />
-        </div>
-        <div class="sub-schedule">
-          <p>
-            <strong
-              >*Following the group meeting, participants are required to watch
-              online videos and complete assigned homework before the next group
-              meeting.</strong
-            >
-          </p>
-          <p>
-            <strong
-              >**Each participant will be assigned a 25-minute time slot on
-              either of the two coaching dates.</strong
-            >
-          </p>
-        </div>
-        <div class="instructors">
-          <h3>Instructor:</h3>
-          <p>
-            Read about Dr. Orly Yadid-Pecht on the <a href="/founder"
-              >Our Founders</a
-            > page
-          </p>
-        </div>
-      </div>
-    </div>
 
-    <div class="results">
-      <h3>Tangible Results</h3>
-      <div class="flex">
-        <div class="num">
-          <h2>80%</h2>
-          <p>
-            of participants had a significant increase in Intellectual Property
-            knowledge and Creative Thinking
-          </p>
-        </div>
-        <div class="num">
-          <h2>90%</h2>
-          <p>
-            of participants saw increase in skills and knowledge in all
-            categories
-          </p>
-        </div>
-        <div class="num">
-          <h2>100%</h2>
-          <p>
-            of participants developed their networks and alliance building
-            capabilities
-          </p>
+      <div class="results">
+        <h3>Tangible Results</h3>
+        <div class="flex">
+          <div class="num">
+            <h2>{content.IPKnowledge}</h2>
+            <p>
+              of participants had a significant increase in Intellectual
+              Property knowledge and Creative Thinking
+            </p>
+          </div>
+          <div class="num">
+            <h2>{content.skills}</h2>
+            <p>
+              of participants saw increase in skills and knowledge in all
+              categories
+            </p>
+          </div>
+          <div class="num">
+            <h2>{content.network}</h2>
+            <p>
+              of participants developed their networks and alliance building
+              capabilities
+            </p>
+          </div>
         </div>
       </div>
     </div>

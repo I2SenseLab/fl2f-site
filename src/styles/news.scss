@@ -19,16 +19,19 @@
   }
 
   .featured {
-    background-color: $primary-color;
+    &:nth-child(odd) {
+      background-color: $primary-color;
+    }
     padding: 5rem 2rem;
-    h2 {
-      a {
-        border-bottom: 2px solid $secondary-color;
-        &:hover {
-          opacity: 0.6;
-        }
+
+    a {
+      border-bottom: 2px solid $secondary-color;
+      transition: opacity 0.3s ease-in-out;
+      &:hover {
+        opacity: 0.6;
       }
     }
+
     .subheading {
       max-width: 800px;
       margin: 2rem auto;
@@ -36,6 +39,8 @@
   }
 
   .invited {
+    // background-color: $primary-color;
+    // padding: 5rem 2rem;
     margin: 3rem 0 5rem;
     text-align: center;
     .card {
