@@ -4,29 +4,23 @@
   width: 100%;
   margin-top: 0;
   height: 100%;
-  min-height: 5200px;
+  min-height: 3200px;
 }
 
-@media screen and (max-width: 680px) {
+@media screen and (max-width: 1200px) {
   .apply-form {
-    min-height: 5500px;
+    min-height: 3600px; 
   }
 }
 
-@media screen and (max-width: 520px) {
+@media screen and (max-width: 768px) {
   .apply-form {
-    min-height: 5700px;
+    min-height: 4300px; 
   }
 }
 
-@media screen and (max-width: 470px) {
+@media screen and (max-width: 480px) {
   .apply-form {
-    min-height: 6200px;
-  }
-}
-
-@media screen and (max-width: 370px) {
-  .apply-form {
-    min-height: 7000px;
+    min-height: 4650px; 
   }
 }
