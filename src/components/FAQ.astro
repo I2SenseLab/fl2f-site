@@ -1,23 +1,30 @@
 ---
-import Career from "../components/Career.astro";
 import { getFAQ } from "../lib/fetchFAQ";
 
-const faqs = await getFAQ();
+import "../styles/career.scss";
+
+// Make sure faqDocument.faqs exists and is an array
+const faqArray = await getFAQ();
+
+import "../styles/career.scss";
 ---
 
-<>
-    {
-        // Map over the fetched FAQs
-        faqs
-        .map((faq) => {
-            // Extract title and Content from each FAQ
-            const title = faq.answer
-            const Content = faq.question;
-
-            // Render the FAQ using the Career component
-            return <Career title={title} Content={Content} />;
-        })
-    }
-
-</>
+<section class="career">
+    {faqArray.map((faqDocument) => (
+        faqDocument.faqs.map((faq) => (
+            <div class="container"> {/* Add a unique key */}
+                <div class="title">
+                    <div class="left">
+                        <h2>{faq.question}</h2> {/* Accessing question */}
+                    </div>
+                </div>
+                <div class="content">
+                    <div class="left">
+                        <p>{faq.answer}</p> {/* Accessing answer */}
+                    </div>
+                </div>
+            </div>
+        ))
+    ))}
+</section>
 
