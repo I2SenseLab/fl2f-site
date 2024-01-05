@@ -1,0 +1,23 @@
+---
+import Career from "../components/Career.astro";
+import { getFAQ } from "../lib/fetchFAQ";
+
+const faqs = await getFAQ();
+---
+
+<>
+    {
+        // Map over the fetched FAQs
+        faqs
+        .map((faq) => {
+            // Extract title and Content from each FAQ
+            const title = faq.answer
+            const Content = faq.question;
+
+            // Render the FAQ using the Career component
+            return <Career title={title} Content={Content} />;
+        })
+    }
+
+</>
+

@@ -3,5 +3,6 @@ import alumniEvent from './alumniEvent'
 import certificateEvent from './certificateEvent'
 import newsEvent from './news'
 import newsEventsPage from './newsEventsPage'
+import faq from './faq'
 
-export const schemaTypes = [learnMore, newsEventsPage, alumniEvent, certificateEvent, newsEvent]
+export const schemaTypes = [learnMore, newsEventsPage, alumniEvent, certificateEvent, newsEvent, faq]

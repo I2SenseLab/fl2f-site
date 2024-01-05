@@ -1,5 +1,5 @@
 ---
-import Career from "../components/Career.astro";
+import FAQ from "../components/FAQ.astro";
 import Showcase from "../components/Showcase.astro";
 import Layout from "../layouts/Layout.astro";
 
@@ -16,17 +16,5 @@ const faqsArr = await Astro.glob("../content/faqs/*.md");
     heading="FAQ"
   />
 
-  {
-    faqsArr
-      .sort((a, b) => {
-        const aOrder = a.frontmatter.order;
-        const bOrder = b.frontmatter.order;
-        return aOrder - bOrder;
-      })
-      .map((faq) => {
-        const { title } = faq.frontmatter;
-        const Content = faq.Content;
-        return <Career title={title} Content={Content} />;
-      })
-  }
+  <FAQ/>
 </Layout>

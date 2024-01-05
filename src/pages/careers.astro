@@ -18,11 +18,5 @@ const careersArr = await Astro.glob("../content/careers/*.md");
     heading="We're Hiring"
   />
 
-  {
-    careersArr.map((career) => {
-      const { title, link } = career.frontmatter;
-      const Content = career.Content;
-      return <Career title={title} Content={Content} link={link} />;
-    })
-  }
+  
 </Layout>

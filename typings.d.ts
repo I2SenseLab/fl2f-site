@@ -79,3 +79,9 @@ export interface NewsEventsPage extends SanityBody {
   alumniEvents: AlumniEvent[];
   newsEvents: newsEvent[];
 }
+
+export interface FAQ extends SanityBody {
+  _type: "faq";
+  question: string;
+  answer: string;
+}
