@@ -4,6 +4,11 @@ export default {
     type: 'document',
     fields: [
         {
+            name: 'title',
+            title: 'FAQ Title',
+            type: 'string',
+        },
+        {
             name: 'faqs',
             title: 'FAQs',
             type: 'array',
@@ -23,6 +28,6 @@ export default {
                     },
                 ],
             }],
-        },
+        }
     ],
 }

@@ -82,6 +82,7 @@ export interface NewsEventsPage extends SanityBody {
 
 export interface FAQ extends SanityBody {
   _type: "faq";
+  title: string;
   faqs: {
     question: string;
     answer: string;
