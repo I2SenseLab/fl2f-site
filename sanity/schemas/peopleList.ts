@@ -27,10 +27,10 @@ export default {
             of: [{type: 'reference', to: {type: 'person'}}]
         }
     ],
-    validation: Rule => Rule.custom(fields => {
+    validation: (Rule: { custom: (arg0: (fields: any) => true | "You cannot have duplicate people in the featured list." | "You cannot have duplicate people in the testimonials list." | "You cannot have duplicate people in the recommendations list.") => any; }) => Rule.custom((fields: { futured: any; testimonials: any; recommendations: any; }) => {
         // Function to check for duplicates
-        const checkDuplicates = (array) => {
-            const unique = new Set(array?.map(item => item._ref));
+        const checkDuplicates = (array: any[]) => {
+            const unique = new Set(array?.map((item: { _ref: any; }) => item._ref));
             return unique.size === array?.length;
         };
 
