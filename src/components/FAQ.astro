@@ -20,7 +20,7 @@ import "../styles/career.scss";
                 </div>
                 <div class="content">
                     <div class="left">
-                        {faq.answer.split("\n").map((line) => (
+                        {faq.answer.split("\n").map((line: unknown) => (
                             <p>{line}</p>
                         ))}
                     </div>
