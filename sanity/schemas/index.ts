@@ -4,5 +4,7 @@ import certificateEvent from './certificateEvent'
 import newsEvent from './news'
 import newsEventsPage from './newsEventsPage'
 import faq from './faq'
+import person from './person'
+import peopleList from './peopleList'
 
-export const schemaTypes = [learnMore, newsEventsPage, alumniEvent, certificateEvent, newsEvent, faq]
+export const schemaTypes = [learnMore, newsEventsPage, alumniEvent, certificateEvent, newsEvent, faq, peopleList, person]

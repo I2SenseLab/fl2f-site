@@ -2,6 +2,7 @@
 import "../styles/what-to-expect.scss";
 import { getLearnMoreContent } from "../lib/fetchLearnMore";
 import { urlFor } from "../lib/fetchImage";
+import { PortableText } from "astro-portabletext";
 
 const content = await getLearnMoreContent();
 ---
@@ -108,81 +109,24 @@ const content = await getLearnMoreContent();
           </p>
           <p>Questions? Please refer to our <a href="/faq">FAQ Page</a></p>
         </div>
-        <div class="costs">
-          <h3>Costs & Deadlines:</h3>
-          <p>
-            Once your application is approved, you will be sent an email
-            regarding payment.
-          </p>
-          <p class="early-bird">
-            <em>
-              <strong
-                >Early-bird registration - ${content.earlyBirdCost} CAD</strong
-              > (to qualify for early-bird, full payment is to be received by <strong
-                >{
-                  new Date(content.earlyBirdEnd).toLocaleDateString("en-US", {
-                    year: "numeric",
-                    month: "long",
-                    day: "numeric",
-                  })
-                }</strong
-              >
-            </em>
-            <p class="regular">
-              <strong>Regular registration - ${content.cost} CAD</strong>
-            </p>
-            <p>
-              You will be required to pay a <strong
-                >${content.deposit} CAD deposit fee</strong
-              > to hold your spot.
-            </p>
-            <p>
-              The remaining balance is to be paid by <strong
-                >{
-                  new Date(content.fullPaymentDueDate).toLocaleDateString(
-                    "en-US",
-                    {
-                      year: "numeric",
-                      month: "long",
-                      day: "numeric",
-                    }
-                  )
-                }.</strong
-              >
-            </p>
-            <p>
-              <strong
-                >Deadline to apply is {
-                  new Date(content.applyDeadline).toLocaleDateString("en-US", {
-                    year: "numeric",
-                    month: "long",
-                    day: "numeric",
-                  })
-                }.</strong
-              >
-            </p>
-          </p>
+        {
+          content.costBlock && content.costBlock.length > 0 &&
+          <div class="costs">
+            <h3>Costs & Deadlines:</h3>
+            {content.costBlock.map((item) => (
+              <PortableText value={item} />
+            ))}
+          </div>
+        }        
+        {
+          content.cancelBlock && content.cancelBlock.length > 0 &&
           <div class="cancelation">
             <h3>Cancelation Policy:</h3>
-            <p>
-              You can cancel and receive a full refund (minus $100 CAD) until
-              {
-                new Date(content.cancelBy).toLocaleDateString("en-US", {
-                  year: "numeric",
-                  month: "long",
-                  day: "numeric",
-                })
-              }. After <strong
-                >{
-                  new Date(content.cancelBy).toLocaleDateString("en-US", {
-                    year: "numeric",
-                    month: "long",
-                    day: "numeric",
-                  })
-                }</strong
-              >, no refunds can be granted.
-            </p>
+            {content.cancelBlock.map((item) => (
+              <PortableText value={item} />
+            ))}
           </div>
+        }        
         </div>
         <!-- Right Side -->
         <div class="schedule">

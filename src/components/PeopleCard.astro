@@ -1,0 +1,76 @@
+---
+import "../styles/testimonials.scss";
+
+import { getPeopleList } from "../lib/fetchPeople";
+import { urlFor } from "../lib/fetchImage";
+
+const peopleList = await getPeopleList();
+
+import Card from "./Card.astro";
+import { ContentSchemaContainsSlugError } from "astro/dist/core/errors/errors-data";
+
+export interface Props {
+  isFeatured: boolean;
+  title?: string;
+  recommendations?: boolean;
+}
+
+const { title, isFeatured, recommendations } = Astro.props as Props;
+
+let mapArr = [];
+
+// Function to safely get and flatten the arrays
+const safeGetArray = (list, key) => {
+  return list && Array.isArray(list[key]) ? list[key].flat() : [];
+};
+
+if (isFeatured) {
+  // Use the 'futured' array for featured testimonials in Homepage, if not empty
+  mapArr = peopleList.map(list => safeGetArray(list, 'futured'));
+} else if (recommendations) {
+  // Use the 'recommendations' array, if not empty
+  mapArr = peopleList.map(list => safeGetArray(list, 'recommendations'));
+} else {
+  // Use the 'testimonials' array, if not empty
+  mapArr = peopleList.map(list => safeGetArray(list, 'testimonials'));
+}
+
+// Flatten the array of arrays resulting from the map
+mapArr = mapArr.flat();
+---
+
+<section class="testimonials">
+  <div class="container">
+    <h2>
+      {title}
+    </h2>
+    {
+      !recommendations && (
+        <p>Check out some of what our past participants have to say!</p>
+      )
+    }
+
+    <div class="grid">
+      {
+        mapArr.map((person) => {
+          return (
+            <Card
+              participantImage={urlFor(person.image).url()}
+              review={person.testimony}
+              title={person.title}
+            />
+          );
+        })
+      }
+    </div>
+    {
+      isFeatured && (
+        <div class="read-more">
+          <a href="/testimonials" class="button">
+            Read More
+          </a>
+        </div>
+      )
+    }
+  </div>
+</section>

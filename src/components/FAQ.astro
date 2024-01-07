@@ -20,32 +20,12 @@ import "../styles/career.scss";
                 </div>
                 <div class="content">
                     <div class="left">
-                        <p>{faq.answer}</p> {/* Accessing answer */}
+                        {faq.answer.split("\n").map((line) => (
+                            <p>{line}</p>
+                        ))}
                     </div>
                 </div>
             </div>
         ))
     ))}
 </section>
-<!-- <section class="career">
-    {faqArray.map((faqDocument) => (
-        <>
-            <div class="container">
-                <div class="title">
-                    <div class="left">
-                        <h2>Fake title</h2> {/* Title for the whole block */}
-                    </div>
-                </div>
-                {faqDocument.test.map((testItem) => (
-                    <div class="content"> {/* Key added here */}
-                        <div class="left">
-                            <PortableText value={testItem} />
-                        </div>
-                    </div>
-                ))}
-            </div>
-        </>
-    ))}
-</section> -->
-
-

@@ -20,13 +20,8 @@ export interface LearnMore extends SanityBody {
   title: string;
   upcomingCourseStart: date;
   upcomingCourseEnd: date;
-  earlyBirdCost: string;
-  earlyBirdEnd: date; // Assuming you'll parse this as a date
-  cost: string;
-  deposit: string;
-  fullPaymentDueDate: date; // Assuming you'll parse this as a date
-  applyDeadline: date; // Assuming you'll parse this as a date
-  cancelBy: string; // Assuming you'll parse this as a date
+  costBlock: text[];
+  cancelBlock: text[];
   pstLink: string;
   mstLink: string;
   cstLink: string;
@@ -85,6 +80,24 @@ export interface FAQ extends SanityBody {
   title: string;
   faqs: {
     question: string;
-    answer: string;
+    answer: text;
   }[];
+}
+
+export interface Person extends SanityBody {
+  _type: "person";
+  name: string;
+  title: string;
+  description: string;
+  testimony: string;
+  image: ImageWithHotspot;
+  order: number;
+}
+
+export interface PeopleList extends SanityBody {
+  _type: "peopleList";
+  title: string;
+  futured: Person[];
+  testimonials: Person[];
+  recommendations: Person[];
 }
